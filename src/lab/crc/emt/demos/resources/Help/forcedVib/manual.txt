@@ -1,0 +1,22 @@
+Manual:
+
+Observation 1: 
+   1) Effect of time period on maximum response Run the experiment with default ground motion and building parameters
+   2. Observe the response and note down the maximum response.
+   3. Repeat the experiment by changing the values of mass of the structure. (Note: Change in mass will change the time period of the
+structure)
+   4. Note the maximum response.
+   5. Plot the graph between the maximum response and the time period of the structure.
+
+Observation 2:
+   6. Effect of resonance without damping Select Resonance from the list of earthquakes. And set damping to Zero
+   7. Run the experiment and note the displacement.
+   8. Response value increases and reaches peak when forcing frequency is nearing natural frequency of the structure.
+   9. Draw the plot between maximum response and frequency ratio.
+   
+Observation 3:
+  10. Effect of resonance with damping Select Resonance from the list of earthquakes. And set damping to Zero
+  11. Run the experiment and note the displacement.
+  12. Response value increases and reaches peak when forcing frequency is nearing natural frequency of the structure.
+  13. Draw the plot between maximum response and frequency ratio.
+

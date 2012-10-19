@@ -1,0 +1,26 @@
+# 
+# Wavefront material file
+# Converted by 3D Exploration 1.2.54
+# XDimension Software
+# http://www.xdsoft.com/explorer/
+# 
+newmtl MAT_926C94
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.752941 0.752941 0.752941
+	 Ks 0.752941 0.752941 0.752941
+	 illum 0
+newmtl TorciereCorpoCentrale
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.388235 0.384314 0.358824
+	 Ks 0.388235 0.384314 0.358824
+	 illum 0
+newmtl TorciereTreRiccioli
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.388235 0.384314 0.358824
+	 Ks 0.388235 0.384314 0.358824
+	 illum 0
+newmtl TorciereAnelloSuperiore
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.388235 0.384314 0.358824
+	 Ks 0.388235 0.384314 0.358824
+	 illum 0

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Membership Database Integration</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Membership Database Integration</h1>
+<hr/>
+
+<h2>Popular CMS Integration Plug-ins</h2>
+
+<p>
+    RealChat can be used directly with popular Bulletin Board and Content Management systems. Simply download the
+    appropriate file and install it using the included instructions:
+</p>
+
+<br/>
+<ul>
+    <li><a href="plugins/RealChat_phpBB2.zip">phpBB2</a> - RealChat intergration mod for phpBB2 (works with EasyMOD)</li>
+    <li><a href="plugins/RealChat_phpBB3.zip">phpBB3</a> - RealChat intergration mod for phpBB3</li>
+    <li><a href="plugins/RealChat_Joomla.zip">Joomla</a> - Joomla 1.0.x integration, works with newer versions of Joomla (in Legacy Mode)</li>
+    <li><a href="plugins/RealChat_IPB.zip">IP.Board</a> - RealChat integration component for Invision Power Board 2.2</li>
+    <li><a href="plugins/RealChat_vBulletin.zip">vBulletin</a> - instructions for integrating RealChat with vBulletin 3.8</li>
+    <li><a href="http://drupal.org/project/realchat/">Drupal</a> - RealChat module for Drupal, written by Steve Cronen-Townsend</li>
+</ul>
+<br/>
+
+<p>
+    If your bulletin board or content management system is not listed, the following topics will help you to integrate
+    RealChat with any existing system.
+    <br/><br/><br/><br/>
+</p>
+<hr/>
+
+<h2>Direct Login using your existing membership information</h2>
+
+<p>
+    RealChat can be easily integrated with an existing user profile or membership, database. RealChat chat urls can
+    contain additional parameters which send additional information to the chat client. These additional parameters
+    allow your users to skip the login screen. You attach these parameters to the standard chat urls generated within
+    the Control Center. Parameters can be added using any server side language. ASP, PHP, and Perl are common choices,
+    but you may use whatever you are comfortable with or whatever your existing website is written in.
+</p>
+<blockquote>
+    The parameters are attached to the chat urls as follows: 
+    <br/><br/>
+    <code>http://chathost:port/?0,0,0,0,0<span style="color: #DD0000">&amp;param1=value1&amp;param2=value2</span></code>
+    <br/><br/>
+    Available parameters include:
+    <br/><br/>
+    <code>nn</code> nickname, URL-encoded<br/>
+    <code>pu</code> profile URL<br/>
+    <code>au</code> avatar URL<br/>
+    <code>rp</code> room password (if the room specified in the link is password-protected)<br/>
+    <code>cu</code> close URL - the url to be opened after the client exits the chat session.<br/>
+    <code>hmac</code> message authentication code (see below)<br/>
+    <br/><br/>
+    For example, to directly login a user with the nickname <i>John</i>, you would use:
+    <br/><br/>
+    <code>http://chathost:port/?0,0,0,0,0<span style="color: #DD0000">&amp;nn=John</span></code>
+    <br/><br/>
+    <i>All parameters need to be passed URL-encoded.</i>
+</blockquote>
+
+<h2>HMAC Protection</h2>
+
+<p>
+    To prevent people from calling the client with fake user data, we strongly recommend that you enable HMAC-based
+    client-server authentication. This is done from the Server Settings section of the Control Center.
+    <br/><br/>
+    The HMAC protection works this way:
+    <br/><br/>
+    1. A secret string is generated on the server side (the client authentication key).<br/>
+    2. The key is made available to the membership database scripts (PHP, ASP, ...).<br/>
+    3. The scripts now generate a unique code for each user.<br/>
+</p>
+<blockquote>
+    The code is generated as follows:
+    <br/>
+    <code>md5( cpID + nickName + profileURL + avatarURL + authKey + date )</code>
+    <br/><br/>
+    <code>cpID</code> is the desired client profile ID.<br/>
+    <code>nickName</code> is the desired username, URL-encoded.<br/>
+    <code>profileURL</code> is the desired profile URL.<br/>
+    <code>avatarURL</code> is the desired avatar URL.<br/>
+    <code>date</code> is the current date in YYYYMMDD format (e.g. 20070126).<br/>
+    <code>authenticationKey</code> corresponds to the Authentication Key set on server side.<br/>
+</blockquote>
+<p>
+    4. Pass the dynamically generated code to the server by setting the <code>hmac</code> parameter of the chat client.<br/>
+    5. Upon receiving a connection request, the chat server also calculates the same hash code and verifies the login
+    details by comparing the result to the string the client sent.<br/><br/>
+</p>
+
+<h2>Example</h2>
+
+<p>
+    The following is a PHP code example which implements the method described above:
+    <br/><br/>
+
+    <code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/**<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Nickname,&nbsp;avatar&nbsp;and&nbsp;profile&nbsp;URLs.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;These&nbsp;are&nbsp;usually&nbsp;pulled&nbsp;from&nbsp;the&nbsp;database.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$nickName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">rawurlencode</span><span
+            style="color: #007700">(</span><span
+            style="color: #DD0000">"test"</span><span
+            style="color: #007700">)</span><span style="color: #007700">;<span style="color: #FF8000">&nbsp;&nbsp;&nbsp;//&nbsp;rawurlencode is important</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$profileURL&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">rawurlencode</span><span
+            style="color: #007700">(</span><span
+            style="color: #DD0000">"http://www.example.com/"</span><span
+            style="color: #007700">)</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$avatarURL&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">rawurlencode</span><span
+            style="color: #007700">(</span><span
+            style="color: #DD0000">"http://www.example.com/avatar.jpg"</span><span
+            style="color: #007700">)</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #FF8000">/**<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;This&nbsp;string&nbsp;must&nbsp;match&nbsp;the&nbsp;Authentication&nbsp;Key,&nbsp;that&nbsp;you<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;specified&nbsp;in&nbsp;the&nbsp;RealChat&nbsp;Control&nbsp;Center,&nbsp;Server&nbsp;Settings.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$authKey&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #DD0000">"KUASRDJMLBVVVPKR"</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #FF8000">/**<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Valid&nbsp;chat&nbsp;launching&nbsp;link&nbsp;generated&nbsp;with&nbsp;the&nbsp;Control&nbsp;Center.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$link&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #DD0000">"http://chathost:port/?0,0,0,0,0"</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #FF8000">/**<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Generates&nbsp;a&nbsp;HMAC-protected&nbsp;link,&nbsp;based&nbsp;on&nbsp;the&nbsp;source&nbsp;link,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;username,&nbsp;avatar&nbsp;and&nbsp;profile&nbsp;URLS,&nbsp;and&nbsp;authKey.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #007700">function&nbsp;</span><span style="color: #0000BB">HMACLink</span><span
+            style="color: #007700">(</span><span style="color: #0000BB">$nickName</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$profileURL</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$avatarURL</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$link</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$authKey</span><span
+            style="color: #007700">)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$cpID&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">substr</span><span style="color: #007700">(</span><span style="color: #0000BB">strrchr</span><span
+            style="color: #007700">(</span><span style="color: #0000BB">$link</span><span
+            style="color: #007700">,&nbsp;</span><span style="color: #DD0000">','</span><span style="color: #007700">),&nbsp;</span><span
+            style="color: #0000BB">1</span><span style="color: #007700">);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$hmac&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">md5</span><span style="color: #007700">(</span><span
+            style="color: #0000BB">$cpID</span><span style="color: #007700">.</span><span style="color: #0000BB">$nickName</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$profileURL</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$avatarURL</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$authKey</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">date</span><span style="color: #007700">(</span><span
+            style="color: #DD0000">'Ymd'</span><span style="color: #007700">));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span
+            style="color: #0000BB">$link</span><span style="color: #007700">.</span><span style="color: #DD0000">"&amp;nn="</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$nickName</span><span
+            style="color: #007700">.</span><span style="color: #DD0000">"&amp;pu="</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$profileURL</span><span
+            style="color: #007700">.</span><span style="color: #DD0000">"&amp;au="</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">$avatarURL</span><span
+            style="color: #007700">.</span><span style="color: #DD0000">"&amp;hmac="</span><span style="color: #007700">.</span><span
+            style="color: #0000BB">$hmac</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #FF8000">/**<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;The&nbsp;dedicated&nbsp;chat&nbsp;URL&nbsp;for&nbsp;this&nbsp;user.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;It&nbsp;should&nbsp;be&nbsp;used&nbsp;for&nbsp;Chat&nbsp;Now&nbsp;buttons,&nbsp;etc.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$hmacLink&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">HMACLink</span><span
+            style="color: #007700">(&nbsp;</span><span
+            style="color: #0000BB">$nickName</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$profileURL</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$avatarURL</span><span style="color: #007700">,&nbsp;</span><span
+            style="color: #0000BB">$link</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$authKey&nbsp;</span><span
+            style="color: #007700">);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #FF8000">//&nbsp;a&nbsp;test<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">echo&nbsp;</span><span
+            style="color: #DD0000">'&lt;a&nbsp;href="'</span><span style="color: #007700">.</span><span
+            style="color: #0000BB">$hmacLink</span><span style="color: #007700">.</span><span style="color: #DD0000">'"&gt;Chat&nbsp;Now!&lt;/a&gt;'</span><span
+            style="color: #007700">;<br/></span><span style="color: #0000BB">?&gt;<br/></span>
+</span>
+    </code>
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Setting Up Your RealChat Server</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Setting Up Your RealChat Server</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    This guide will take you through the introductory steps that must be performed to setup a RealChat server.
+</p>
+
+
+<h2>Step 1) Install RealChat</h2>
+
+<p>
+    The first step in setting up a RealChat is installing it on your server. To run RealChat, your server must
+    meet the following minimum requirements:
+</p>
+
+<ul class="dsc">
+    <li>A dedicated server or unrestricted shell account on a shared server.</li>
+    <li><a href="http://java.com/en/download/manual.jsp">Java Runtime Environment</a> installed on the server (can be
+        installed with RealChat).
+    </li>
+    <li>UNIX, Linux or Windows operating system.</li>
+</ul>
+
+<p>
+    After you have ensured that your server can be used with RealChat, you can install the server. If you are installing
+    on UNIX or Linux, the installation instructions are located <a href="install-unix.html">here</a>. If you are
+    installing on a Windows Server, the installation instructions are located <a href="install-windows.html">here</a>.
+    <br/><br/>
+    After the installation finishes, you should be able to access the <a href="control-center.html">control center</a>.
+    If you are unable to access the control center, please verify that the firewall on the server has been configured to
+    allow requests on the control center port. If you need assistance configuring the Windows Firewall, please see the
+    <a href="howto-firewall.html">How to Configure the Windows Firewall</a> topic.
+</p>
+
+<h2>Step 2) Restrict Access to the Control Center</h2>
+
+<p>
+    After you login to the control center the first thing you should do is change the administrator password so that
+    unauthorized users cannot login. This is done on the <a href="cc-general-access.html">Access Control</a> page. At
+    the same time, you can restrict access to only allow specific IP addresses to access the control center.
+</p>
+
+
+<h2>Step 3) Adjust Bind Settings</h2>
+
+<p>
+    After you have properly restricted access so that unauthorized users cannot access the control center, you should
+    verify that the Bind Settings are correct. The bind settings can be modified on the <a href="cc-general-bind.html">Bind
+    Settings</a> page. The bind settings control what IP address and ports are used to access the control center as well
+    as the chat client. When you adjust the bind settings, make sure to adjust your firewall to allow the appropriate
+    connections.
+</p>
+
+<h2>Step 4) Configure the Chat Rooms</h2>
+
+<p>
+    Now that your server is installed, you should decide what rooms you want your chat server to have and what
+    permissions you want your users to have. For more information on this step, please see the <a
+        href="howto-rooms.html">How to Manage your Chat Rooms</a> topic.
+</p>
+
+<h2>Step 5) Personalize RealChat for Your Site</h2>
+
+<p>
+    You can change the RealChat server Welcome message on the <a href="cc-server-server.html">Server Settings</a> page.
+    With the Enterprise Edition you may also change the Private Brand which is also on the Server Settings page to
+    contain the name of your website or company.
+    <br/><br/>
+    The chat client window can be customized to match the appearance of your website so that your users look at the chat
+    functionality as an extension of your own website. The colors are customized on the <a href="cc-client-themes.html">Color
+    Themes</a> page. Color themes allow you to define the specific colors used to display each element within the
+    client window.
+    <br/><br/>
+    The <a href="cc-client-profiles.html">Client Profiles</a> page allows you to define what functionality is available
+    within the client. Using profiles allows you to ensure that your users do not have access to functionality which
+    you do not want them to have. You can also reduce the functionality of the client to avoid confusing your users with
+    advanced functionality.
+</p>
+
+<h2>Step 6) Provide Links to Your Chat Rooms</h2>
+
+<p>
+    If you have an existing website which already has a user management component, you can <a
+        href="database-integration.html">integrate RealChat</a> with your existing system so that your users do not need
+    to log-in to RealChat as a separate step and to ensure that only users who are already registered with your website
+    can access the chat.
+    <br/><br/>
+    If you do not have an existing membership database, you can simply use the <a href="cc-client-code.html">Code
+    Generator</a> to create links to your chat system.
+</p>
+
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

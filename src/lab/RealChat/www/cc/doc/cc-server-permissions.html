@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: User Permissions</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="cc-server.html">parent topic</a> | <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>User Permissions</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    The user permissions page allows you to determine how users can gain operator or administrator permissions. These
+    enhanced permissions give users the ability to warn other users, kick them from a chat room, and even ban them from
+    chatting. The administration commands and permissions are further described in the <a
+        href="chatroom-administration.html">Chat Room Administration</a> topic.
+    <br/><br/>
+    There are two methods of giving user's enhanced privileges. The first method is creating a list of passwords which
+    are used with the <code>/pass</code> command. The second method is creating a list of user names which should be
+    automatically promoted to administrators or operators.
+</p>
+
+<h2>Shared Passwords</h2>
+
+<p>
+    If you enable the Shared Passwords option, RealChat will display two lists. The first list is a list of
+    Administrator passwords and the second is a list of operator passwords. In both lists, each password should be
+    separated with commas.
+    <br/><br/>
+    To use a password, the user will enter the <code>/pass</code> command in the chat window and then the password. For
+    example if
+    the password is <i>admin</i>, the user would enter <code>/pass admin</code> in the chat window.
+    <br/><br/>
+    When using shared passwords, make sure that the passwords are not easy to guess and that only administrators and
+    operators know the appropriate commands. You should also change passwords on a regular basis.
+</p>
+
+<h2>Predefined User Lists</h2>
+
+<p>
+    When the <b>Use predefined user lists</b> option is turned on, RealChat will display two lists. Each list will
+    contain a list of the user names that should be given administrator rights and operator rights respectively.
+    <br/><br/>
+    The predefined user lists should be used when RealChat is <a href="database-integration.html">integrated with an existing website</a> and
+    all users have login links automatically generated for them. HMAC authentication should also be used so that a
+    normal user cannot forge a login to gain administrator rights.
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>
+
+
+
+
+
+
+

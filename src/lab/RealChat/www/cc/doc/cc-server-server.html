@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Server Settings</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="cc-server.html">parent topic</a> | <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Server Settings</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    The Server Settings page allows you to configure login requirements as well as room settings which are shared for
+    all rooms.
+</p>
+
+<h2>Server Status</h2>
+
+<p>
+    The server status drop down list allows you to temporarily close the chat server so that the chat rooms are not
+    open.
+    When the chat server is closed, no users can chat. This is useful if you only want to allow chats at specific times
+    of the day.
+</p>
+
+<h2>HMAC authentication</h2>
+
+<p>
+    This setting allows you to determine if HMAC-based client-server authentication must be used during the login
+    process. When integrating RealChat with a membership database, you should
+    enable this option to prevent people from logging into the chat rooms with faked user data.
+</p>
+
+<h2>Double login policy</h2>
+
+<p>
+    This setting allows you to determine how to handle situations where two users attempt to login using the same
+    nickname. The available actions are:
+    <br/><br/>
+    <code>Deny</code> - Causes RealChat to reject the second connection.<br/>
+    <code>Allow</code> - Allow the second connection, but RealChat appends a random number to the nickname so the users can be
+    identified.<br/>
+    <code>Boot Other</code> - Allows the second connection and boots the original connection which used the duplicate nickname. 
+</p>
+
+<h2>Users per room</h2>
+
+<p>
+    This setting is used to limit the total number of users in a room. When this limit is reached, a new 'spare' room is
+    automatically created and all new users are automatically sent to this room. If this value is set above 50, the
+    performance of the chat may be degraded. You may set this value to blank to remove all limits, but that is not
+    recommended. The default value for this setting is 50.
+</p>
+
+<h2>Welcome message</h2>
+
+<p>
+    The welcome message is the first message sent to users when they enter the chat server. You should change this
+    message to include your website name and describe any rules that you have for your users.
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

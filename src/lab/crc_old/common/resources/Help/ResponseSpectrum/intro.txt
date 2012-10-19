@@ -1,0 +1,5 @@
+Introducation:
+
+When a structural system is subjected to alternating force then the system is said to be under-going forced vibration.
+Examples of this type of vibration include a structure subjected to vibrating machines, vibration of a building during
+an earthquake or under the action of wind, etc.

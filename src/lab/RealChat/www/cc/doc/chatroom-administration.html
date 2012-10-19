@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Chat Room Administration</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Chat Room Administration</h1>
+<hr/>
+
+<h2>Permission Levels</h2>
+
+<p>
+    RealChat supports several levels of user permissions. You can distinguish between normal users, users who are room
+    owners, operators, administrators and the server itself. Note the hierarchy: for example, an operator can kick any
+    normal user, but can't kick an administrator, and so forth.
+</p>
+<br/>
+<table class="TBL" cellspacing="1">
+<thead>
+    <tr>
+        <td width="370">
+            Permission
+        </td>
+        <td width="70">
+            Room&nbsp;Owner
+        </td>
+        <td width="70">
+            Operator
+        </td>
+        <td width="70">
+            Administrator
+        </td>
+    </tr>
+</thead>
+<tbody>
+
+<tr>
+    <td class="thead">
+        Warn users
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr class="even">
+    <td class="thead">
+        Kick users out of the <i>room</i>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+</tr>
+<tr>
+    <td class="thead">
+        Freeze (temporarily mute) users
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr class="even">
+    <td class="thead">
+        Kick users off the <i>server</i>
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr>
+    <td class="thead">
+        See a users' IP adresses
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr class="even">
+    <td class="thead">
+        Ban a user by nickname and IP address/subnet
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr>
+    <td class="thead">
+        Join password-protected and full rooms
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr class="even">
+    <td class="thead">
+        Moderate chat conversations
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr>
+    <td class="thead">
+        Invisible (stealth) mode
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+<tr class="even">
+    <td class="thead">
+        Broadcast messages to all rooms
+    </td>
+    <td>
+
+    </td>
+    <td>
+
+    </td>
+    <td>
+        <img alt="yes" src="images/li_check.gif"/>
+    </td>
+</tr>
+
+</tbody>
+</table>
+<br/>
+
+<h2>Becoming an Operator/Administrator</h2>
+
+<p>
+    When you first join the chat, you are logged in as a normal user, without any permissions. To become operator
+    or administrator, use the <code>/pass {password}</code> command. You must know the administrator or operator
+    password for the chat server.
+</p>
+
+<h2>Administration Commands</h2>
+
+<p>
+    Most of the commands are available through the user list context menu. For example, to kick a user, an operator
+    would click their name and slect <code>Kick</code> from the menu.
+</p>
+<blockquote>
+    Commands available through the context menu:
+    <br/><br/>
+    <code>Warn</code> - Warn a user.<br/>
+    <code>Freeze</code> - Prohibit a user from chatting (lasts 1 minute).<br/>
+    <code>Kick</code> - Kick a user out of the chat (or out of the room, when used by room owner).<br/>
+    <code>Ban</code> - Ban user's host and nickname.<br/>
+    <code>Whois</code> - Display user information including IP address.<br/>
+</blockquote>
+<br/>
+<blockquote>
+    Commands that you type directly into the chat input field:
+    <br/><br/>
+    <code>/pass {password}</code> - Become an administrator or operator.<br/>
+    <code>/user</code> - Return to regular user mode.<br/>
+    <code>/ping</code> - Ping the server and print out the round trip.<br/>
+    <code>/stealth</code> - Become invisible/visible to users.<br/>
+    <code>/bc {message}</code> - Broadcast a message to all users in all rooms.<br/>
+    <code>/moderate</code> - Moderate a room; see the <a href="moderated-chat.html">Moderator section</a> for details.<br/>
+    <code>/highlight {nickname}</code> - Highlight a guest speaker in a moderated room;<br/>  
+</blockquote>
+
+<p>
+    For more information see <a href="howto-users.html">Dealing With Problem Users</a> article in the <b>How To</b> section.
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

@@ -1,0 +1,11 @@
+Theory:
+
+When a structural system is subjected to alternating force then the system is said to be under-going forced vibration.
+Examples of this type of vibration include a structure subjected to vibrating machines, vibration of a building during
+an earthquake or under the action of wind, etc.
+
+In forced vibration, the response of the structure not only depends the amplitude but also on the frequency of the applied force, however, the 
+magnitude of the vibration response is strongly dependent on the behavior of the structural system. Usually in forced vibration we need to consider
+the nature of the force and nature of the system. We are discussing here the forced vibrations of linear single degree of freedom systems.
+
+

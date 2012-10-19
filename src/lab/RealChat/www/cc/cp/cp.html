@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>ColorJack: DHTML Color Picker</title>
+ <link href="plugin.css" rel="stylesheet" type="text/css"/>
+ <script src="plugin.js" type="text/JavaScript"></script>
+</head>
+<body style="margin-top: 10px;padding-top: 10px;border-style: none;">
+<div id="plugin">
+ <input id="plugHEX" type="text" onchange="cvChanged();"/>
+ <br/>
+
+ <div id="SV" onmousedown="HSVslide('SVslide','plugin',event)" title="Saturation + Value">
+ <div id="SVslide" style="TOP: -4px; LEFT: -4px;"><br/></div>
+ </div>
+ <div id="H" onmousedown="HSVslide('Hslide','plugin',event)" title="Hue">
+ <div id="Hslide" style="TOP: -7px; LEFT: -8px;"><br/></div>
+ <div id="Hmodel"></div>
+ </div>
+</div>
+<script type="text/javascript">
+ loadSV();
+</script>
+</body>
+</html>

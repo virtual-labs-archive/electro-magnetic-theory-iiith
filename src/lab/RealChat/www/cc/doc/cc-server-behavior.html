@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Behavior Control</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="cc-server.html">parent topic</a> | <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Behavior Control</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    The behavior control page gives you control over several automatic features which help you to control problem users.
+    Each feature is described below.
+</p>
+
+<h2>Max Message Length</h2>
+
+<p>
+    The maximum message length control allows you to control how many characters can be typed and then sent to the chat
+    server at one time.
+</p>
+
+<h2>Default Ban Timeout</h2>
+
+<p>
+    This setting defines the default ban timeout in minutes. When a user has been kicked out of a chat room, they cannot
+    rejoin the conversation until the ban times out. The ban timeout value applies to the following
+    situations:<br/><br/>
+    Users automatically kicked for flooding.<br/>
+    Users automatically kicked for profanity.<br/>
+    Users kicked by operator/administrator.<br/>
+</p>
+
+<h2>Kick URL</h2>
+
+<p>
+    This setting is an optional URL which users are redirected to after they have been kicked out of a chat sever either
+    by the automatic functionality or manually by an operator or administrator. The full url should be provided. I.e.
+    <code>http://www.yourdomain.com/sitepolicies.htm</code>
+    <br/><br/>
+    We suggest that this page that explains your chat community policies as well as why users may be kicked or banned.
+</p>
+
+<h2>Warn and Kick Users who are flooding</h2>
+
+<p>
+    When enabled, this setting will cause the chat server to automatically warn and then kick any user that rapidly
+    enters chat messages without pause.
+</p>
+
+<h2>Warn and Kick Inactive Users</h2>
+
+<p>
+    When enabled, this setting will cause the chat server to automatically warn and then kick any user that has not
+    typed a message for the specified time period.
+</p>
+
+<h2>Profane Word Filter</h2>
+
+<p>
+    When you enable the profane word filter, the Control Center will display two additional controls which allow you to
+    control which words are filtered and what consequences are applied to users who are repeat offenders.
+</p>
+
+<h2>Warn then Kick Users who use profane words</h2>
+
+<p>
+    When this setting is enabled, the chat server will automatically warn and then kick any user that uses profanity
+    more than the specified number of times. If this setting is not used, the profanity will simply be replaced with
+    dashes, but users will not be kicked off.
+</p>
+
+<h2>Profane words list</h2>
+
+<p>
+    The profane words list is a comma-separated list of prohibited words. The filter replaces
+    each word from the list with a mask like this: <code>---</code>.
+    <br/><br/>
+    Filtering is processed on the client side, so the original content is still logged on the server side. You may also
+    use regular expressions to define several related words at one time.
+</p>
+
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>
+
+
+
+
+
+
+

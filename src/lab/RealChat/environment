@@ -1,0 +1,15 @@
+   java.version: 1.6.0_20
+    java.vendor: Sun Microsystems Inc.
+java.vm.version: 19.0-b09
+ java.vm.vendor: Sun Microsystems Inc.
+   java.vm.name: OpenJDK Server VM
+   java.vm.info: mixed mode
+      java.home: /usr/lib/jvm/java-6-openjdk/jre
+        os.arch: i386
+     os.version: 2.6.31-23-generic
+        os.name: Linux
+       user.dir: /var/www/emt_new/RealChat
+      user.name: vlab
+
+     Processors: 2
+         Memory: 455 MB

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Advanced</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="cc-general.html">parent topic</a> | <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Advanced</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    The Advanced Page allows you to modify settings which can improve the performance of your RealChat server. The
+    following settings can be modified.
+</p>
+
+<h2>Connection limit</h2>
+
+<p>
+    This setting controls the total number of simultaneous connections that can be made to the chat server. The server
+    will stop accepting connections when this limit is reached. When one or more connections are closed, the server will
+    begin accepting connections again. The default value for this server is 3000 users. If you do not want to have a
+    fixed limit, you can change this value to -1.
+</p>
+
+
+<h2>IP limit</h2>
+
+<p>
+    This setting controls the total number of simultaneous connections from a single IP address. The default value for
+    this setting is 10. If you do not want to have a fixed limit, you can change this value to -1.
+</p>
+
+<h2>Subnet limit</h2>
+
+<p>
+    Limits the total number of simultaneous connections from the same subnet (the first three components of the ip
+    address); for example, 192.168.0.* The default value for this setting is 100. If you do not want to have a fixed
+    limit, you can change this value to -1.
+</p>
+
+<h2>Server mode</h2>
+
+<p>
+    The Test Mode allows you to run benchmark scripts against the server. Test Mode ignores the limits which you have
+    placed on numbers of Connections for IP/Subnet, and also ignores FloodChecks and HMAC authentication. However, in
+    Test Mode, the number of users per room remains valid, so that you can make measurements based on this setting.
+    <br/><br/>
+    Because the Test Mode is less secure and may have performance issues, please make sure to return the Server Mode to
+    Protected after your testing is finished.
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

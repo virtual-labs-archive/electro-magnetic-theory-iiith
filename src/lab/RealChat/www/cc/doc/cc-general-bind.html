@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Bind Settings</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="cc-general.html">parent topic</a> | <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Bind Settings</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    The bind settings page controls what ports are used by RealChat to serve the public
+    chat service and to handle the control center. After installing RealChat, you should verify that these ports are not
+    being blocked by a firewall and that they do not conflict with other applications running on the sever. If you
+    determine that there is a conflict, press the <b>Probe Options</b> button to have RealChat search for alternative
+    ports.
+    RealChat will display a list of alternatives for the Chat Service as well as the Control Center. You can either
+    leave the settings at no change, or you can select another IP address and port to use.
+    <br/><br/>
+    If your chat users will be located behind firewalls, we recommend that port <b>443</b> or <b>80</b> is used for the
+    chat service. On Unix and Linux systems, ports lower than 1024 can only be used by the system administrator (root
+    user), so you must run RealChat as root to achieve that.
+    <br/><br/>
+    If you are also running a web server on the same host, you will need at least two IP
+    addresses (one for the web server and one for RealChat server). The web server
+    must be configured so it does not bind to all interfaces. For Apache servers, this is done
+    using the <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mpm_common.html#listen">Listen</a>
+    configuration directive. For Microsoft IIS, you must configure
+    each host for a specific address and disable Socket Pooling. See the Microsoft Knowledge Base article <a
+        target="_blank" href="http://support.microsoft.com/kb/q238131/">Q238131</a> for
+    more information.
+    <br/><br/>
+    If you host RealChat on a Windows server or home computer, to allow users to access the chat server, you must
+    correctly <a href="howto-firewall.html">configure the Windows Firewall</a>.
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

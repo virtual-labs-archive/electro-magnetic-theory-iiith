@@ -1,0 +1,41 @@
+# 
+# Wavefront material file
+# Converted by 3D Exploration 1.2.54
+# XDimension Software
+# http://www.xdsoft.com/explorer/
+# 
+newmtl MAT_2376A5C
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.752941 0.752941 0.752941
+	 Ks 0.752941 0.752941 0.752941
+	 illum 0
+newmtl Halberd Fringe
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.567059 0.192941 0.192941
+	 Ks 0.378039 0.128627 0.128627
+	 illum 0
+newmtl Halberd Staff
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.449412 0.484706 0.489412
+	 Ks 0.299608 0.323137 0.326275
+	 illum 0
+newmtl Halberd Low Ferrule
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.529412 0.484706 0.275294
+	 Ks 0.352941 0.323137 0.183529
+	 illum 0
+newmtl Halberd Ball
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.529412 0.484706 0.275294
+	 Ks 0.352941 0.323137 0.183529
+	 illum 0
+newmtl Halberd High Knots
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.529412 0.484706 0.275294
+	 Ks 0.352941 0.323137 0.183529
+	 illum 0
+newmtl Halberd High Blade
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.449412 0.484706 0.489412
+	 Ks 0.299608 0.323137 0.326275
+	 illum 0

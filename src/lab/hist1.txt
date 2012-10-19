@@ -1,0 +1,26 @@
+    1  cd
+    2  ssh-keygen 
+    3  cat .ssh/id_rsa.pub 
+    4   exit
+    5  cd
+    6  ssh test
+    7  exit
+    8  cd
+    9  vi .ssh/authorized_keys
+   10  exit
+   11  ssh test
+   12  ls
+   13  tar xvzf vlab_bckups.tar.gz 
+   14  ls
+   15  rm vlab_bckups.tar.gz 
+   16  ls
+   17  cd vlab_bckups/
+   18  ls
+   19  tar xvzf emt_new.tar.gz 
+   20  ls
+   21  rm emt_new.tar.gz 
+   22  ls
+   23  cd emt_new/
+   24  ls
+   25  history
+   26  history > hist1.txt

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Configure the Windows Firewall</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Configure the Windows Firewall</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    This topic applies to users hosting RealChat on a Windows server or home computer.
+</p>
+
+<h2>Configure the Windows Firewall</h2>
+
+<p>
+    In order to allow users to access the chat server, you must correctly configure the Windows Firewall. The Windows
+    Firewall is accessed from the Control Panel. After you open the firewall settings, you need to manage the exceptions
+    list. The exceptions list is managed on the Exceptions tab:
+
+    <br/><br/>
+    <img src="images/firewall_exceptions.png" alt="RealChat windows firewall"/>
+    <br/><br/>
+
+    To allow access to the Control Center, first select the <b>Add Port</b> button.
+
+    <br/><br/>
+    <img src="images/add_port_dialog.png" alt="RealChat windows firewall"/>
+    <br/><br/>
+
+    In the Add a Port dialog enter a memorable name and enter the Port number that you have configured in the <a
+        href="cc-general-bind.html">Bind Settings</a>, and select the OK button. Repeat these steps for the chat server
+    as well as the control center.
+    <br/><br/>
+    If you are using a different firewall, the steps will be similar to the above.
+    <br/><br/>
+    If you are running RealChat on a home computer, you need to ensure that your ISP will allow connections to your
+    computer. If you have problems with users connecting to your chat server, check with your ISP to ensure that the
+    ports that are specified in the bind settings are enabled and ask them to enable them if they are not.
+
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>
+
+
+
+
+
+

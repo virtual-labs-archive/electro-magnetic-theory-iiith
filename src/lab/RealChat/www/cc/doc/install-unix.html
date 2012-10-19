@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Installing on UNIX/Linux Platforms</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Installing on UNIX/Linux Platforms</h1>
+<hr/>
+
+<h2>Java Runtime Environment</h2>
+
+<p>
+    RealChat Server requires the Sun Java Runtime Environment (JRE) in order to run. You can either choose to <a
+        href="http://java.com/en/download/manual.jsp">download and install</a> the JRE
+    prior to installing RealChat, or have the RealChat installer download a private JRE on demand. If you
+    choose the latter, the JRE downloaded will be only available to RealChat, and not to other applications.
+    <br/><br/>
+    The on-demand JRE download works for Linux only; for other systems please install the JRE manually.
+    <br/><br/>  
+    The JRE should be installed to a common location such as <code>/usr/local/java/</code>,
+    <code>/home/username/java/</code> or in the same location as RealChat itself so it can be found by the launcher
+    script.
+</p>
+
+<h2>Installation</h2>
+
+<p>
+    RealChat Server for UNIX/Linux platforms comes packaged as a single archive named <code>realchat-unix.tar.gz</code>.
+    Extract the archive to a directory of your choice:<br/><br/>
+    <code>tar -xzvf realchat-unix.tar.gz</code><br/><br/>
+    A directory called RealChat is then created, which contains all of the program files. Navigate to that directory and
+    execute
+    the launcher script:<br/><br/>
+    <code>cd RealChat<br/>
+        ./realchat start</code>
+    <br/><br/>
+    The launcher script will try to locate your Java Interpreter, select suitable chat server ports, and start
+    RealChat Server. After the script completes, a message similar to the following will be displayed:<br/><br/>
+    <code>
+        RealChat 5.0, Build: 582 (20070122)<br/>
+        Free Trial, 5 users license, ID: n/a<br/>
+        <br/>
+        Point your browser to: http://192.168.0.10:10055/
+    </code>
+    <br/><br/>
+    At this stage RealChat is installed and running on your server.
+</p>
+
+<h2>Configuration</h2>
+
+<p>
+    Further customization and administration of RealChat Server is done via the built-in web-based Control Center, which
+    is accessible at the URL which is given in the final status message of the launcher script. The Control Center
+    functionality is described in the <a href="control-center.html">next
+    chapter</a>.<br/><br/>
+</p>
+
+<h2>Troubleshooting</h2>
+
+<p>
+    If the service fails to start please refer to the <code>out.log</code> file, located in the RealChat directory for
+    diagnostic information.<br/><br/>
+    To stop RealChat Server, use the command: <code>./realchat stop</code>
+
+</p>
+
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

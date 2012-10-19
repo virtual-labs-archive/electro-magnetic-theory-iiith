@@ -1,0 +1,21 @@
+RealChat Installation Instructions:
+
+
+UNIX/Linux:
+
+tar -xzvf realchat-unix.tar.gz
+cd RealChat
+./realchat start
+
+
+Windows:
+
+Run realchat-windows.exe, then go to Start/Programs/RealChat.
+If a firewall is running on the server machine, please allow
+realchat.exe to act as a server.
+
+
+Troubleshooting:
+
+If the service fails to start please refer to the out.log file,
+located in the RealChat directory.

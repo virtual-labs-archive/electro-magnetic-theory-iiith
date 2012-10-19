@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Auto-generated file. Do not edit. -->
+<channels>
+	<channelgroup id="0" description="Default server" usersPerChannel="50" welcomeMessage="Welcome to RealChat!" doubleLoginPolicy="0" forceLatinInNamesAndTopics="false" logServiceMessages="false" logPublicMessages="false" logPrivateMessages="false" logUserRooms="false" logFileLimit="0" logFileCount="5" floodCheck="true" defaultBanTimeout="1" inactivityCheck="true" inactivityTimeout="30" profanityFilter="false" profanityCheck="false" profanityLimit="10" maxMessageLength="2000">
+		<channel id="0" name="Lobby" topic="General chat" ignoreUserLimit="false" ignoreFloodCheck="false" ignoreInactivityCheck="false"/>
+		<channel id="1" name="Staff Only" topic="Restricted area" password="top-secret" ignoreUserLimit="false" ignoreFloodCheck="false" ignoreInactivityCheck="false"/>
+	</channelgroup>
+</channels>

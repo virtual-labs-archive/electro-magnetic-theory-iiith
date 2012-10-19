@@ -1,0 +1,1372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+ <title>RealChat Control Center</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<div style="display: none" id="sidebar">
+
+ <div class="in">
+ <div class="navHead" onclick="UI.doSelect('n1-1')">General</div>
+
+ <div class="navBody" id="n1">
+ <div class="navItem" onclick="UI.doSelect(this)" id="n1-1">Welcome</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n1-2">Access&nbsp;Control</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n1-3">Bind&nbsp;Settings</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n1-4">System&nbsp;Info</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n1-5">Advanced</div>
+ </div>
+
+ <div class="navHead" onclick="UI.doSelect('n2-1')">Server</div>
+
+ <div class="navBody" id="n2">
+ <div class="navItem" onclick="UI.doSelect(this)" id="n2-1">Server&nbsp;Settings</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n2-2">Rooms&nbsp;Settings</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n2-3">User&nbsp;Permissions</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n2-4">Behavior&nbsp;Control</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n2-5">Log&nbsp;Settings</div>
+ </div>
+
+ <div class="navHead" onclick="UI.doSelect('n3-1')">Client</div>
+
+ <div class="navBody" id="n3">
+ <div class="navItem" onclick="UI.doSelect(this)" id="n3-1">Code&nbsp;Generator</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n3-2">Client&nbsp;Profiles</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n3-3">Color&nbsp;Themes</div>
+ </div>
+
+ <div class="navHead" onclick="UI.doSelect('n4-1')">Usage&nbsp;Monitor</div>
+
+ <div class="navBody" id="n4">
+ <div class="navItem" onclick="UI.doSelect(this)" id="n4-1">Dashboard</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n4-2">Room&nbsp;Browser</div>
+
+ <div class="navItem" onclick="UI.doSelect(this)" id="n4-3">Ban&nbsp;List</div>
+ </div>
+
+ <div class="navItem" onclick="Logic.logout()">Logout</div>
+ </div>
+</div>
+
+<div style="display: none" id="content">
+
+<!-- Virtual Server Navigation Block -->
+<div id="vsNavBlock" style="display: none; text-align: center;" class="vsNavBlock">
+ Selected&nbsp;server:&nbsp;
+ <span id="vsNavPlaceholder">vsNav</span>
+
+ <label for="vsNavPlaceholder">
+ <a class="tip">?<span>
+ Per-server settings, such as room lists,<br/>
+ are always applied to the selected server.
+ </span></a>
+ </label>
+ &nbsp;
+ <a onclick="Logic.addVS();" title="Add new Virtual Server definition.">Add</a>&nbsp;|&nbsp;
+ <a onclick="Logic.removeVS();" title="Delete selected Virtual Server definition.">Remove</a>
+</div>
+
+
+<!-- Room Navigation Block -->
+<div id="roomNavBlock" style="display: none; text-align: center;" class="roomNavBlock">
+ Selected&nbsp;room:&nbsp;
+ <span id="roomNavPlaceholder">roomNav</span>
+
+ <label for="roomNavPlaceholder">
+ <a class="tip">?<span>
+ Per-room settings, such as name and topic,<br/>
+ are always applied to the selected room.
+ </span></a>
+ </label>
+ &nbsp;
+ <a onclick="Logic.addRoom();" title="Add new Room definition.">Add</a>&nbsp;|&nbsp;
+ <a onclick="Logic.removeRoom();" title="Delete selected Room definition.">Remove</a>
+</div>
+
+<!-- Client profile navigation Block -->
+<div id="profileNavBlock" style="display: none; text-align: center;" class="roomNavBlock">
+ Selected&nbsp;profile:&nbsp;
+ <span id="profileNavPlaceholder">profileNav</span>
+
+ <label for="profileNavPlaceholder">
+ <a class="tip">?<span>
+ Changes are always applied<br/>
+ to the selected profile.
+ </span></a>
+ </label>
+</div>
+
+<!-- Visual theme navigation Block -->
+<div id="themeNavBlock" style="display: none; text-align: center;" class="roomNavBlock">
+ Selected&nbsp;theme:&nbsp;
+ <span id="themeNavPlaceholder">themeNav</span>
+
+ <label for="themeNavPlaceholder">
+ <a class="tip">?<span>
+ Changes are always applied<br/>
+ to the selected theme.
+ </span></a>
+ </label>
+</div>
+
+<div class="in">
+
+<!-- Login Form -->
+<div id="loginform">
+ <div class="cBigHeading">
+ Login
+ </div>
+
+ <div class="cBody">
+ <div class="form">
+ <label for="rcUserName" class="left">Username:</label>
+ <input class="right" type="text" id="rcUserName" value="Administrator"/>
+
+ <label class="left" for="rcPassword">Password:</label>
+ <input class="right" type="password" id="rcPassword" value="default"/>
+
+ <div class="right">
+ <input type="checkbox" id="rcLoginRemember"/>
+ <label for="rcLoginRemember">Remember me.</label>
+ </div>
+
+ <div class="buttongroup">
+ <span class="right"><input id="rcLoginButton" type="submit" onclick="Logic.login();"
+ value="Login"/></span>
+ </div>
+
+ </div>
+ </div>
+</div>
+
+<!-- General -->
+<div id="sn1">
+
+<!-- Welcome/checklist -->
+<div style="display: none" id="sn1-1">
+ <div class="cBigHeading">
+ Welcome to RealChat
+ </div>
+
+ <div class="cBody">
+ <p>
+ This is the <i>RealChat Control Center</i>&#8212;the web-based application which provides complete control
+ over your RealChat server making administration easy.
+ </p>
+
+
+ <h3 class="cHeading">Local Help</h3>
+
+ <p>
+ Quick tool-tip help and hints are available for most of the settings. Click the question mark in a shaded
+ box to view the tool-tip.<br/><br/>
+ For more detailed instructions, the <a target="_blank" href="/doc/index.html">RealChat User's Guide</a> is
+ available locally.
+ </p>
+
+ <h3 class="cHeading">Online Resources</h3>
+
+ <p>
+ Visit the RealChat <a href="http://www.realchat.com/support.php">Online Support Center</a> to
+ access FAQ pages or to request technical support.
+ </p>
+
+ <br/>
+
+ <p>
+ <input type="checkbox" id="rcGDS" onclick="UI.setGDS();"/>
+ <label for="rcGDS">When starting, go directly to the Room Browser page.</label>
+ </p>
+ </div>
+
+ <div style="display: none" id="clist" class="checklist">
+ <b>
+ New installation checklist:
+ </b>
+
+ <ul class="checklist">
+ <li id="cl01" onclick="UI.doSelect('n1-2');">Change administrator password</li>
+ <li id="cl02" onclick="UI.doSelect('n1-3');">Review auto-detected network settings</li>
+ </ul>
+ </div>
+
+</div>
+
+<!-- RealChat Control Center Access -->
+<div style="display: none" id="sn1-2">
+ <div class="cBigHeading">RealChat Control Center Access</div>
+
+ <div class="cBody">
+ <div class="intro">
+ The following settings affect the way that you access the RealChat Control Center remotely.
+ </div>
+
+
+ <div class="form">
+ <p class="inputgroup">Change administrator password:</p>
+
+ <label for="rcAdminPassword1" class="left">New password:
+ <a class="tip">?<span>
+ This is the master password. Use it to<br/>
+ access the RealChat Control Center.<br/><br/>
+ The login name is <b>Administrator</b>.
+ </span></a>
+ </label>
+
+ <input class="right" type="password" id="rcAdminPassword1"/>
+
+ <label class="left" for="rcAdminPassword2">Confirm password:</label>
+ <input class="right" type="password" id="rcAdminPassword2"/>
+
+
+ <p class="inputgroup">Restrict Administrator access:</p>
+
+ <label class="left" for="rcTrustedIPs">Trusted IP adresses:
+ <a class="tip">?<span>
+ RealChat Control Center only allows access to requests coming<br/>
+ from trusted IP addresses. These should only be the IP addressess<br/>
+ of computers that you will use to remotely manage RealChat.<br/><br/>
+ Enter trusted IP addresses here, one per line.<br/><br/>
+ Masks are allowed, e.g., <br/><code>192.168.0.*</code><br/><br/>
+ The address <code>*.*.*.*</code> allows access from anywhere,<br/>and is not recommended.
+ </span></a>
+ </label>
+ <textarea id="rcTrustedIPs" class="right"
+ cols="20"
+ rows="6"></textarea>
+
+ <div class="buttongroup">
+ <span class="right">
+ <input type="submit" onclick="Logic.updateAccessControl();" value="Apply Changes"/>
+ </span>
+ </div>
+ </div>
+
+ </div>
+</div>
+
+<!-- Bind Settings -->
+<div style="display: none" id="sn1-3">
+ <div class="cBigHeading">Bind Settings</div>
+
+ <div class="cBody">
+ <div class="intro">
+ The RealChat public chat service includes a chat server for handling chat requests, and a basic web
+ server for serving the chat client files. To allow access for users behind firewalls, both servers
+ share a single address.<br/><br/>
+ The Control Center service, this application, runs on a separate address.<br/><br/>
+ The following settings control the way RealChat listens for incoming connections.
+ </div>
+
+ <div class="form">
+ <p class="inputgroup">Current settings:</p>
+ <label class="left">Public chat service:</label><a target="_blank" class="right" id="rcCurrentLinkHref"
+ href="."><span
+ id="rcCurrentLink">-</span></a>
+ <label class="left">Control Center:</label><span class="right" id="ccCurrentLink">-</span>
+ <br/>
+
+ <p class="inputgroup">Change bind settings:</p>
+
+ <div id="rcNetworkChangeLink" class="hint">
+ If you change the bind settings, you must restart the chat service for the changes to take effect.
+ All currently connected users will be dropped so you may want to broadcast a message to all users prior
+ to changing the bind settings. You must also update any existing links to your chat server to match the
+ new address.
+ <br/><br/>
+ <input type="submit"
+ onclick="Logic.probeBindOptions(); UI.show('rcNetworkSettingsForm'); UI.hide('rcNetworkChangeLink');"
+ value="Probe Options"/>
+ </div>
+
+
+ <div id="rcNetworkSettingsForm" style="display: none">
+ <label for="rcBindAddressOptions" class="left">Public chat service:
+ <a class="tip">?<span>
+ Available bind options for the public chat service, excluding the current address.
+ <br/><br/>
+ To facilitate access for users behind firewalls, we recommend the use of port <b>443</b><br/>
+ or <b>80</b>, if available. On Unix and Linux systems, ports lower than 1024 can only be<br/>
+ used by the system administrator (root user), so you must run RealChat as root<br/>
+ to achieve that.
+ <br/><br/>
+ If there is a web server running on the same host, you will need at least two IP<br/>
+ addresses (one for the web server and one for RealChat server). The web server<br/>
+ has to be configured so it does not bind to all interfaces. For Apache this is done<br/>
+ using the <b class="link"
+ onclick="window.open('http://httpd.apache.org/docs/2.0/mod/mpm_common.html#listen');">
+ Listen</b> configuration directive. For Microsoft IIS, you have to configure<br/>
+ each host for a specific address and disable Socket Pooling (<b class="link"
+ onclick="window.open('http://support.microsoft.com/kb/q238131/');">Q238131</b>).
+ <br/><br/>
+ If you host RealChat on a Windows server or home computer, to allow users to<br/>
+ access the chat server, you must
+ correctly <b class="link"
+ onclick="window.open('/doc/howto-firewall.html');">configure the Windows Firewall</b>.
+
+ </span></a>
+ </label>
+
+
+ <span id="rcBindAddressOptionsPlaceholder">
+ <select id="rcBindAddressOptions">
+ <option>-</option>
+ </select>
+ </span>
+
+ <label for="ccBindAddressOptions" class="left">Control center:
+ <a class="tip">?<span>
+ Available bind options for the control center service,<br/>
+ excluding the current address (shown above).
+ </span></a>
+ </label>
+
+ <span id="ccBindAddressOptionsPlaceholder">
+ <select id="ccBindAddressOptions">
+ <option>-</option>
+ </select>
+ </span>
+
+
+ <div class="buttongroup">
+ <span class="right">
+ <input type="submit" value="Apply Changes" onclick="Logic.updateBindSettings()"/>
+ <input type="reset" value="Cancel"
+ onclick="UI.hide('rcNetworkSettingsForm'); UI.show('rcNetworkChangeLink');"/>
+ </span>
+ </div>
+
+
+ </div>
+ </div>
+
+ </div>
+</div>
+
+<!-- System Info -->
+<div style="display: none" id="sn1-4">
+ <div class="cBigHeading">
+ RealChat <span id="productVersion">n/a</span>
+ </div>
+
+ <div class="cBody">
+
+ <h3 id="productName">n/a</h3>
+
+ <h3 id="productLicense">n/a</h3>
+
+ <b>License ID:</b>
+ <span id="productLicenseKey">n/a</span><br/>
+
+ <input type="submit" id="rcRegLink" value="Register/Upgrade"
+ onclick="UI.show('rcRegCodeForm'); UI.hide('rcRegLink');"/>
+
+ <div id="rcRegCodeForm" style="display: none">
+ <div class="note">
+ To obtain a commercial license, please <a href="http://www.realchat.com/order-realchat-software.php">click
+ here</a>.
+ <br/><br/>
+ Paste Registration Key Block:<br/>
+ <textarea class="long" style="width:500px;" id="rcRegKeyBlock" rows="3" cols="25"></textarea>
+ <br/>
+ Domain name: <input type="text" id="rcRegDomain" size="30" value="yourdomain.com"/>
+ <br/><br/>
+ <input type="submit" value="Submit" onclick="Logic.uploadReginfo();"/>
+ <input type="reset" value="Cancel" onclick="UI.hide('rcRegCodeForm'); UI.show('rcRegLink');"/>
+ </div>
+ </div>
+
+ <br/><br/>
+ <b>Updates:</b>
+ <span id="rcUpdateLabel">n/a</span>
+ <span id="rcUpdateControls">
+ (<span id="rcLastTimeChecked">n/a</span>)<br/>
+ <input type="submit" value="Check now" id="rcCheckUpdateLink"
+ onclick="Logic.requestUpdateCheck(); UI.hide(this);"/>
+ </span>
+
+ <div style="display:none" class="hint" id="rcHasUpdate">
+ New software update has been downloaded and is ready to be applied. Applying updates requires
+ service restart. All currently connected users will be dropped. After the update is applied
+ you may need to restart your browser.
+ <br/><br/>
+ <span><input type="submit" onclick="Logic.applyUpdate();" value="Apply Update"/></span>
+ </div>
+ </div>
+
+ <div class="cBigHeading">
+ Server Environment
+ </div>
+
+ <div class="cBody">
+ <div id="productEnvironment" class="fixedInfo">
+ n/a
+ </div>
+
+ </div>
+</div>
+
+<!-- Advanced -->
+<div style="display: none" id="sn1-5">
+
+ <div class="cBigHeading">Advanced Settings</div>
+
+ <div class="cBody">
+ <div class="intro">
+ In this area, you can fine-tune some of the advanced service and network settings.
+ When you apply the changes you make in this section, you must restart the service.
+ The default values are safe to use for most environments.
+ </div>
+
+ <div class="form">
+ <label for="aMaxConnections" class="left">Connection limit:
+ <a class="tip">?<span>
+ Limits the total number of simultaneous connections.<br/>
+ The server stops accepting connections when this limit is<br/>
+ reached. After one or more connections are closed, the<br/>
+ server will begin accepting connections again.<br/><br/>
+ default: <code>3000</code><br/>
+ -1= no limit
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aMaxConnections" size="5"/>
+
+ <label for="aMaxConnectionsPerIP" class="left">IP limit:
+ <a class="tip">?<span>
+ Limits the total number of simultaneous<br/>
+ connections from a single IP address.<br/><br/>
+ default: <code>10</code><br/>
+ -1= no limit
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aMaxConnectionsPerIP" size="5"/>
+
+ <label for="aMaxConnectionsPerSubnet" class="left">Subnet limit:
+ <a class="tip">?<span>
+ Limits the total number of simultaneous<br/>
+ connections from the same subnet; for example,<br/>
+ 192.168.0.*<br/><br/>
+ default: <code>100</code><br/>
+ -1= no limit
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aMaxConnectionsPerSubnet" size="5"/>
+
+ <br/>
+ <label for="aBacklog" class="left">TCP backlog:
+ <a class="tip">?<span>
+ Limits the backlog, or queue of incoming connections, which<br/>
+ have been pre-accepted by the TCP/IP protocol stack, <br/>
+ but not yet accepted by the server application.<br/><br/>
+ default: <code>500</code><br/>
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aBacklog" size="5"/>
+
+ <label for="aBufferSize" class="left">TCP buffer size:
+ <a class="tip">?<span>
+ Sets the client socket buffer size, in bytes.<br/><br/>
+ default: <code>2048</code><br/>
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aBufferSize" size="5"/>
+
+ <label for="aQueueSize" class="left">Send queue size:
+ <a class="tip">?<span>
+ Sets the client send-queue size, in packets.<br/><br/>
+ default: <code>500</code><br/>
+ </span></a>
+ </label>
+ <input class="right" type="text" id="aQueueSize" size="5"/>
+
+ <br/>
+ <label for="aTestMode" class="left">Server mode:
+ <a class="tip">?<span>
+ Select <i>Test Mode</i> to run benchmark scripts freely against the <br/>
+ server. Test Mode ignores limits such as <i>Connection</i>, <i>IP/Subnet</i>,<br/>
+ <i>FloodCheck</i> and <i>HMAC</i>.<br/>
+ <br/>
+ In <i>Test Mode</i>, <i>Users per room</i> remains valid, as it could be<br/>
+ a part of the measurements. <br/> 
+ </span></a>
+ </label>
+ <select class="right" id="aTestMode">
+ <option value="0">Protected</option>
+ <option value="1">TEST MODE</option>
+ </select>
+
+ <div class="buttongroup">
+ <span class="right">
+ <input type="submit" value="Apply &amp; Restart" onclick="Logic.updateAdvancedSettings();"/>
+ </span>
+ </div>
+
+ </div>
+ </div>
+
+
+</div>
+
+</div>
+
+<!-- Server Settings -->
+<div id="sn2">
+
+<!-- General Server Settings -->
+<div style="display: none" id="sn2-1">
+<div class="cBigHeading">Server Settings</div>
+
+<div class="cBody">
+
+<div class="form">
+<div id="vsSettingsBlock" style="display:none;">
+ <label for="vsDescription" class="left">Description:
+ <a class="tip">?<span>
+ Descriptive, human-readable name<br/>
+ for this virtual server, e.g.<br/>
+ <code>example.com community</code><br/><br/>
+ Used for administrative purposes only,<br/>
+ and not shown to clients.
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:250px;" id="vsDescription"/>
+ <label for="vsNotes" class="left">Notes:
+ <a class="tip">?<span>
+ Free-form custom notes, e.g.<br/>
+ <code>paid until 2010</code>
+ </span></a>
+ </label>
+ <textarea class="right" style="width:250px; height:50px;"
+ rows="3" cols="30" id="vsNotes"></textarea>
+ <br/>
+
+ <label for="vsUserLimit" class="left">User limit:
+ <a class="tip">?<span>
+ Limits the total number of simultaneous<br/>
+ users for this server.<br/><br/>
+ blank= no limit
+ </span></a>
+ </label>
+ <input class="right" type="text" id="vsUserLimit" size="5"/>
+ <label for="vsRoomLimit" class="left">Room limit:
+ <a class="tip">?<span>
+ Limits the total number of rooms allowed<br/>
+ for this server.<br/><br/>
+ blank= no limit
+ </span></a>
+ </label>
+ <input class="right" type="text" id="vsRoomLimit" size="5"/>
+ <br/>
+</div>
+
+<label for="vsStatus" class="left">Server status:
+ <a class="tip">?<span>
+ Lets you temporarily close a chat server. Useful with<br/>
+ guided communities or scheduled chat sessions.<br/>
+ </span></a>
+</label>
+<select class="right" id="vsStatus" onchange="UI.setVisible('vsSCT', this.selectedIndex==1);">
+ <option value="1">Open</option>
+ <option value="0">Closed</option>
+</select>
+ <span id="vsSCT" style="display:none;">
+ <label for="vsCloseMessage" class="left">Close message:
+ <a class="tip">?<span>
+ Lets you enter a short message that explains why the server is closed.
+ </span></a>
+ </label>
+ <textarea class="right" style="width:250px; height:50px;"
+ rows="3" cols="30" id="vsCloseMessage"></textarea>
+ </span>
+
+<label for="vsUseHMAC" class="left">HMAC authentication:
+ <a class="tip">?<span>
+ Lets you enable and disable HMAC-based client-server authentication.<br/>
+ When integrating RealChat with a membership database, you should<br/>
+ enable this option to prevent people from calling the client with<br/>
+ fake user data.<br/>
+ <br/>
+ Check this article for further help:<br/>
+ <b class="link"
+ onclick="window.open(window.location+'doc/database-integration.html');">
+ Using RealChat with external database</b>
+ </span></a>
+</label>
+<select class="right" id="vsUseHMAC" onchange="UI.setVisible('vsHMT', this.selectedIndex==1);">
+ <option value="0">Disabled</option>
+ <option value="1">Enabled</option>
+</select>
+ <span id="vsHMT" style="display:none;">
+ <label for="vsHMAC" class="left">Authentication Key:
+ <a class="tip">?<span>
+ Displays the key to use for HMAC-based authentication.<br/>
+ <br/>
+ When you set, or reset, the authentication key you <i>must</i> update <br/>
+ all chat generation scripts to match the new value. Copying the<br/>
+ new key and pasting it into the script ensures accuracy.
+ </span></a>
+ </label>
+
+ <span class="right">
+ <input type="text" onclick="this.select();" readonly="readonly" style="width: 200px;" id="vsHMAC"/>
+ <a onclick="E.set('vsHMAC',UI.generateHMAC());">generate random key</a>
+ </span>
+ </span>
+
+<label for="vsDoubleLogin" class="left">Double login policy:
+ <a class="tip">?<span>
+ Sets the action to take when two users have the same nickname<br/>
+ and one is already logged in. Actions include the following:<br/>
+ <br/>
+ <code>Deny</code> - reject the connection.<br/>
+ <code>Allow</code> - allow the connection and append a random<br/>
+ number to nickname.<br/>
+ <code>Boot Other</code> - allow the connection and boot the<br/>
+ other connection using the same nickname.
+ </span></a>
+</label>
+
+<select class="right" id="vsDoubleLogin">
+ <option value="0">Deny</option>
+ <option value="1">Allow</option>
+ <option value="2">Boot Other</option>
+</select>
+
+
+<label for="vsUsersPerRoom" class="left">Users per room:
+ <a class="tip">?<span>
+ Limits the total number of users in a room.<br/>
+ When this limit is reached, a new 'spare' room<br/>
+ is automatically created.<br/>
+ <br/>
+ For best performance use values that are<br/>
+ less than <code>50</code>.<br/>
+ <br/>
+ blank= no limit, not recommended
+ </span></a>
+</label>
+<input class="right" type="text" id="vsUsersPerRoom" size="5"/>
+
+<label for="vsWelcomeMessage" class="left">Welcome message:
+ <a class="tip">?<span>
+ This is the first message sent to clients when they join;<br/>
+ for example: <code>Welcome to RealChat!</code>
+ </span></a>
+</label>
+<textarea class="right" style="width:250px; height:50px;"
+ rows="3" cols="30" id="vsWelcomeMessage"></textarea>
+
+<br/>
+
+<div id="brandBlock" style="display:none;">
+ <label for="OEMName" class="left">Private branding:
+ <a class="tip">?<span>
+ Specify the brand to use instead of RealChat; for example:<br/>
+ <code>XYZ Chat System</code><br/><br/>
+ blank= default
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width: 250px;" id="OEMName"/>
+ <br/>
+</div>
+
+<div class="buttongroup">
+ <span class="right">
+ <input value="Apply Changes" onclick="Logic.updateGeneralSettings();" type="submit"/>
+ </span>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Rooms Settings -->
+<div style="display: none" id="sn2-2">
+ <div class="cBigHeading">
+ Rooms Settings
+ </div>
+
+ <div class="cBody">
+
+ <div class="intro">
+ In this area, you can define the list of permanent rooms that the server starts with.
+ </div>
+
+ <div class="form">
+ <label for="roomName" class="left">Room name:
+ <a class="tip">?<span>
+ Enter a unique name for this room; for example,<br/>
+ <code>Hot Rocking</code>.
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:200px;" id="roomName"/>
+
+ <label for="roomTopic" class="left">Room topic:
+ <a class="tip">?<span>
+ Optional. Enter a topic for this room; for example, <br/>
+ <code>Chat about rock music</code>. 
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:350px;" id="roomTopic"/>
+
+ <label for="roomPassword" class="left">Room password:
+ <a class="tip">?<span>
+ Optional. Enter a room password. Users will be<br/>
+ prompted for the password before entering the room.<br/>
+ <br/>
+ Leave this box blank for public rooms.
+ </span></a>
+ </label>
+ <input class="right" type="text" id="roomPassword"/>
+
+ <label for="roomVisibility" class="left">Visibility:
+ <a class="tip">?<span>
+ Regulates the appearance of this room's name on the room list.<br/>
+ Hidden rooms are accessed by using the chat URL directly.
+ </span></a>
+ </label>
+ <select class="right" id="roomVisibility">
+ <option value="1">Visible</option>
+ <option value="0">Hidden</option>
+ </select>
+
+ <div class="buttongroup">
+ <span class="right">
+ <input value="Apply Changes" onclick="Logic.updateRoomSettings();" type="submit"/>
+ </span>
+ </div>
+ </div>
+ </div>
+
+</div>
+
+<!-- User Permissions -->
+<div style="display: none" id="sn2-3">
+ <div class="cBigHeading">User Permissions</div>
+
+ <div class="cBody">
+ <div class="intro">
+ RealChat supports three levels of user permissions. These include <i>normal users</i>, <i>operators</i>,
+ and <i>administrators</i>. For more details about the hierarchy please visit: <a target="_blank"
+ href="/doc/chatroom-administration.html">Chat Room
+ Administration</a>.
+ <br/><br/>
+ When people first join a chat, they are logged in as a normal user without any permissions. To become
+ an administrator or operator, they can use the <code title="While in chat simply type /pass and hit enter.">
+ /pass</code> command. <i>[shared passwords option]</i>
+ <br/><br/>
+
+ When integrating with a membership database, you can define lists of user names that belong to
+ the operators or administrators group. When a user logs in, if a name is matched to the list,
+ the user is automatically promoted to an operator or administrator role. <i>[predefined lists option]</i>
+ </div>
+
+ <div class="form">
+ <input type="checkbox" id="vsSharedPasswords" onclick="UI.setVisible('vsSPT', this.checked);"/>
+ <label for="vsSharedPasswords">Use shared passwords.</label>
+
+ <div id="vsSPT" class="inner" style="display:none;">
+ <table width="650">
+ <tr>
+ <td>
+ <label for="vsAdminPasswords">Administrator passwords:
+ <a class="tip">?<span>
+ Comma-separated list of passwords.
+ </span></a>
+ </label><br/>
+ <textarea id="vsAdminPasswords" cols="20" rows="2"
+ style="width:300px; height:60px;"></textarea>
+ </td>
+ <td>
+ <label for="vsOpPasswords">Operator passwords:
+ <a class="tip">?<span>
+ Comma-separated list of passwords.
+ </span></a>
+ </label><br/>
+ <textarea id="vsOpPasswords" cols="20" rows="2"
+ style="width:300px; height:60px;"></textarea>
+ </td>
+ </tr>
+ </table>
+ </div>
+ <br/><br/>
+
+ <input type="checkbox" id="vsPredefinedList" onclick="UI.setVisible('vsPLT', this.checked);"/>
+ <label for="vsPredefinedList">Use predefined user lists.</label>
+
+ <div id="vsPLT" class="inner" style="display:none;">
+ <table width="650">
+ <tr>
+ <td>
+ <label for="vsAdminNames">Administrators:
+ <a class="tip">?<span>
+ Comma-separated list of users<br/>
+ who belong to the administrators group.<br/>
+ </span></a>
+ </label><br/>
+ <textarea id="vsAdminNames" cols="20" rows="2"
+ style="width:300px; height:60px;"></textarea>
+ </td>
+ <td>
+ <label for="vsOpNames">Operators:
+ <a class="tip">?<span>
+ Comma-separated list of users<br/>
+ who belong to the operators group.<br/>
+ </span></a>
+ </label><br/>
+ <textarea id="vsOpNames" cols="20" rows="2"
+ style="width:300px; height:60px;"></textarea>
+ </td>
+ </tr>
+ </table>
+ </div>
+ <br/>
+
+ <div class="buttongroup">
+ <span class="right">
+ <input value="Apply Changes" onclick="Logic.updateUserPermissions();" type="submit"/>
+ </span>
+ </div>
+
+ </div>
+ </div>
+</div>
+
+<!-- User behavior -->
+<div style="display: none" id="sn2-4">
+ <div class="cBigHeading">Behavior Control</div>
+
+ <div class="cBody">
+ <div class="intro">
+ This section sets the basic user limitations, used for first-level moderation.
+ </div>
+ <div class="form">
+
+ <label for="maxML" class="left">Max message length:
+ <a class="tip">?<span>
+ The maximum message length for<br/>
+ messages typed in the chat window.
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:30px;" id="maxML"/>
+ <label for="vsDefaultBanTimeout" class="left">Default ban timeout:
+ <a class="tip">?<span>
+ Specifies the default ban timeout in <i>minutes</i>.<br/>
+ Users who have been kicked out of chat are not<br/>
+ allowed rejoin until the ban times out.<br/><br/>
+ This applies to:<br/>
+ <br/>
+ Users automatically kicked for flooding.<br/>
+ Users automatically kicked for profanity.<br/>
+ Users kicked by operator/administrator.<br/>
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:20px" id="vsDefaultBanTimeout"/>
+ <label for="vsKickURL" class="left">Kick URL:
+ <a class="tip">?<span>
+ An optional URL where misbehaved users are sent,<br/>
+ when being kicked out.<br/><br/>
+ Could be a page that explains your chat community<br/>
+ policies; why usually users get kicked/banned, etc.
+ </span></a>
+ </label>
+ <input class="right" type="text" style="width:200px" id="vsKickURL"/>
+ <br/>
+
+ <input type="checkbox" id="vsFloodCheck"/>
+ <label for="vsFloodCheck">Warn then kick users who are flooding the chat.</label>
+ <br/>
+
+ <input type="checkbox" id="vsInactivityCheck"/>
+ <label for="vsInactivityCheck">Warn then kick users who have not typed anything
+ for <input type="text" style="width:20px" id="vsInactivityTimeout"/> minutes.</label>
+ <br/>
+
+ <input type="checkbox" id="vsProfanityFilter"
+ onclick="UI.setVisible('vsPFT', this.checked);UI.setVisible('vsPWK', this.checked);"/>
+ <label for="vsProfanityFilter">Enable profane word filter.</label>
+ <br/>
+ <span id="vsPWK" style="display:none">
+ <input type="checkbox" id="vsProfanityKick"/>
+ <label for="vsProfanityKick">Warn then kick users who use profane words more than <input
+ type="text"
+ style="width:20px"
+ id="vsPWLimit"/>
+ times.</label>
+ </span>
+
+ <div id="vsPFT" class="inner" style="display:none">
+ <table width="650">
+ <tr>
+ <td>
+ <label for="vsProfaneWords">Profane words list:
+ <a class="tip">?<span>
+ A comma-separated list of prohibited words. The filter replaces<br/>
+ each word from the list with a mask like this: <code>---</code>.<br/>
+ <br/>
+ Filtering is <i>processed on the client side</i>, so the original content is<br/>
+ still logged on the server side. Regular expressions are allowed.
+ </span></a>
+ </label>
+ <br/>
+ <textarea id="vsProfaneWords" cols="20" rows="10"
+ style="width:600px; height:100px;"></textarea>
+ </td>
+ </tr>
+ </table>
+ </div>
+
+ <br/><br/>
+
+
+ <div class="buttongroup">
+ <span class="right">
+ <input value="Apply Changes" onclick="Logic.updateUserSettings();" type="submit"/>
+ </span>
+ </div>
+ </div>
+ </div>
+</div>
+
+<!-- Logging settings -->
+<div style="display: none" id="sn2-5">
+ <div class="cBigHeading">Log Settings</div>
+
+ <div class="cBody">
+ <div class="intro">
+ RealChat log files are stored in the <code>/logs</code> subdirectory of the directory where you installed
+ RealChat.
+ Chat transcripts are grouped by virtual server and files are named like this: <code>NN-chat.log</code>,
+ where <code>NN</code> is the ID
+ of the virtual server.
+ </div>
+
+ <p class="inputgroup">Logging options:</p>
+
+ <div class="form">
+ <input type="checkbox" id="vsLogServiceMessages"/>
+ <label for="vsLogServiceMessages">Log service events, such as users entering/leaving.</label>
+ <br/>
+ <input type="checkbox" id="vsLogPublicMessages"/>
+ <label for="vsLogPublicMessages">Log public messages and events.</label>
+ <br/>
+ <input type="checkbox" id="vsLogPrivateMessages"/>
+ <label for="vsLogPrivateMessages">Log private (one-to-one) messages.</label>
+ <br/>
+ <input type="checkbox" id="vsLogUserRooms"/>
+ <label for="vsLogUserRooms">Log messages in user-created rooms.</label>
+
+ <div class="TBA">
+ <input type="checkbox" id="vsLogFormatXML"/>
+ <label for="vsLogFormatXML">Use XML-style logging instead of plain-text.</label>
+ </div>
+ </div>
+
+ <p class="inputgroup">Log file rotation:</p>
+
+ <div class="form">
+ Rotate logs:
+ <select id="logFileLimit">
+ <option value="0">Daily</option>
+ <option value="-1">Monthly</option>
+ <option value="10">Size &gt; 10MB</option>
+ <option value="20">Size &gt; 50MB</option>
+ </select>
+ </div>
+
+ <div class="buttongroup">
+ <span class="right">
+ <input value="Apply &amp; Restart" onclick="Logic.updateLoggingSettings();" type="submit"/>
+ </span>
+ </div>
+ </div>
+
+</div>
+</div>
+
+</div>
+
+<!-- Client Settings -->
+<div id="sn3">
+
+<div style="display: none" id="sn3-1">
+ <div class="cBigHeading">
+ HTML Code Generator
+ </div>
+
+ <div class="cBody">
+ <div class="intro">
+ Here you create chat launching URLs. Simply decide which theme, profile and language to use, copy the URL
+ generated, and paste it into your web site. Link directly to the URL, open it in a popup window, or have it
+ displayed in an iframe.
+ <br/><br/>
+ You can link directly
+ to a specific chat room, other than the default one. You can also select the virtual server to connect to
+ (<i>ISP Edition</i>).<br/><br/>
+ HMAC authentication should be turned off, for the preview to work.
+ </div>
+ <br/>
+
+ <div style="display: none" id="vsSel">
+ <label class="left">Virtual server:</label>
+ <span class="right" id="vsSelectPlaceholder"><select id="cgs">
+ <option value="0">pp</option>
+ </select></span>
+ </div>
+ <label class="left">Default room:</label>
+ <span class="right" id="roomSelectPlaceholder">pp</span>
+ <br/>
+ <label class="left">Theme:</label>
+ <span class="right" id="themeSelectPlaceholder">pp</span>
+ <label class="left">Language:</label>
+ <span class="right" id="languageSelectPlaceholder">pp</span>
+ <label class="left">Profile:</label>
+ <span class="right" id="profileSelectPlaceholder">pp</span>
+ <br/>
+ <label class="left">Chat URL:</label>
+ <a target="_blank" class="right" id="cURLhref" href="."><span id="cURL">-</span></a>
+ </div>
+</div>
+
+<div style="display: none" id="sn3-2">
+<div class="cBigHeading">
+ Client Profiles
+</div>
+
+<div class="cBody">
+<div class="intro">
+ Chat client profiles are predefined sets of user permissions and interface settings. You can define
+ up to five profiles here, each suitable for a different user group. For example, you may have one
+ profile for paying customers, with all the features enabled, and also have a restricted profile for
+ free or guest members.
+ <br/><br/>
+ HMAC authentication should be turned off, for the preview to work.
+</div>
+
+<div class="form">
+<label for="profileName">Profile name:
+ <a class="tip">?<span>
+ Unique name for this profile;<br/>
+ for example, <code>Guests</code>.</span></a>
+</label>
+<input type="text" style="width:200px;" id="profileName"/>
+
+<p class="inputgroup">User permissions: <a class="tip">?<span>
+ Specify what is allowed for people<br/>
+ connecting with this profile.</span></a></p>
+
+<div class="form">
+ <input type="checkbox" id="canSetURLs"/>
+ <label for="canSetURLs">Set avatar/profile URLs</label>
+ <br/>
+ <input type="checkbox" id="canCreateRooms"/>
+ <label for="canCreateRooms">Create rooms</label>
+ <br/>
+ <input type="checkbox" id="canSwitchRooms"/>
+ <label for="canSwitchRooms">Switch rooms</label>
+ <br/>
+ <input type="checkbox" id="canSendPrivate"/>
+ <label for="canSendPrivate">Send private messages</label>
+</div>
+
+<p class="inputgroup">Settings dialog: <a class="tip">?<span>
+ Define the default values for the chat client <i>Settings dialog</i>.<br/>
+ You may also decide to hide the <i>Settings button</i> (see below),<br/>
+ thus forcing people to use the preset values.</span></a></p>
+
+<div class="form">
+ <table border="0" cellspacing="5" cellpadding="0">
+ <tr valign="top">
+ <td>
+ <fieldset>
+ <legend id="SDCA">Chat area</legend>
+ <input id="s0" type="checkbox"/>
+ <label id="SDSA" for="s0">Show avatars</label>
+ <input id="s1" type="checkbox"/>
+ <label id="SDSS" for="s1">Show emoticons</label>
+ <br/>
+ <input id="s2" type="checkbox"/>
+ <label id="SDIF" for="s2">Show custom fonts and colors</label>
+ </fieldset>
+ </td>
+ <td>
+ <fieldset>
+ <legend id="SDPL">User list</legend>
+ <input id="s3" type="checkbox"/>
+ <label id="SDPSA" for="s3">Show avatars</label>
+ <br/>
+ <input id="s4" type="checkbox"/>
+ <label id="SDPA" for="s4">Sort alphabetically</label>
+ </fieldset>
+ </td>
+ </tr>
+ <tr valign="top">
+ <td>
+ <fieldset>
+ <legend id="SDG">General</legend>
+ <input id="s5" type="checkbox"/>
+ <label id="SDEL" for="s5">Show people joining/leaving</label>
+ <br/>
+ <input id="s6" type="checkbox"/>
+ <label id="SDIP" for="s6">Ignore private messages</label>
+ <br/>
+ <input id="s7" type="checkbox"/>
+ <label id="SDLF" for="s7">Use large fonts</label>
+ </fieldset>
+ </td>
+ <td>
+ <fieldset>
+ <legend id="SDS">Sounds on</legend>
+ <input id="s8" type="checkbox"/>
+ <label id="SDSEL" for="s8">People joining</label>
+ <br/>
+ <input id="s9" type="checkbox"/>
+ <label id="SDSPU" for="s9">Public messages</label>
+ <br/>
+ <input id="s10" type="checkbox"/>
+ <label id="SDSPV" for="s10">Private messages</label>
+ </fieldset>
+ </td>
+ </tr>
+ </table>
+</div>
+
+<p class="inputgroup">UI elements: <a class="tip">?<span>
+ Decide which user interface elements will be<br/>
+ visible/enabled for this profile.
+ </span></a></p>
+
+<div class="form">
+ <table border="0" cellspacing="5" cellpadding="0">
+ <tr valign="top">
+ <td>
+ <fieldset>
+ <legend>UI Panels</legend>
+ <input id="u0" type="checkbox"/>
+ <label for="u0">Chat panel</label>
+ <input id="u1" type="checkbox"/>
+ <label for="u1">Chat panel options bar</label>
+ <br/>
+ <input id="u2" type="checkbox"/>
+ <label for="u2">Input panel</label>
+ <input id="u3" type="checkbox"/>
+ <label for="u3">Input panel options bar</label>
+ <br/>
+ <input id="u4" type="checkbox"/>
+ <label for="u4">Userlist panel</label>
+ <input id="u5" type="checkbox"/>
+ <label for="u5">Userlist panel options bar</label>
+ <br/>
+ <input id="u19" type="checkbox"/>
+ <label for="u19">Custom area (online/away indicator)</label>
+ <br/>
+ </fieldset>
+ </td>
+ </tr>
+ <tr valign="top">
+ <td>
+ <fieldset>
+ <legend>UI Buttons</legend>
+ <input id="u6" type="checkbox"/>
+ <label for="u6">Send</label>
+ <input id="u7" type="checkbox"/>
+ <label for="u7">Bold</label>
+ <input id="u8" type="checkbox"/>
+ <label for="u8">Italic</label>
+ <input id="u9" type="checkbox"/>
+ <label for="u9">Underline</label>
+ <input id="u10" type="checkbox"/>
+ <label for="u10">Color</label>
+ <input id="u11" type="checkbox"/>
+ <label for="u11">Emoticons</label>
+ <input id="u12" type="checkbox"/>
+ <label for="u12">Clear</label>
+ <input id="u13" type="checkbox"/>
+ <label for="u13">Save</label>
+ <br/>
+ <input id="u14" type="checkbox"/>
+ <label for="u14">Autoscroll</label>
+
+
+ <input id="u15" type="checkbox"/>
+ <label for="u15">Rooms</label>
+ <input id="u16" type="checkbox"/>
+ <label for="u16">Settings</label>
+ <input id="u17" type="checkbox"/>
+ <label for="u17">Help</label>
+ <input id="u18" type="checkbox"/>
+ <label for="u18">Exit</label>
+ </fieldset>
+ </td>
+ </tr>
+ </table>
+</div>
+
+<div class="buttongroup">
+ <span class="right">
+ <input value="Apply Changes" onclick="Logic.updateProfileSettings();" type="submit"/>
+ <input value="Apply &amp; Preview" onclick="Logic.previewProfileSettings();" type="submit"/>
+ </span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Visual Design -->
+<div style="display: none" id="sn3-3">
+ <div class="cBigHeading">
+ Color Theme Editor
+ </div>
+
+ <div class="cBody">
+ <div class="form">
+ <label for="themeName">Theme name:
+ <a class="tip">?<span>
+ Unique name for this theme</span></a>
+ </label>
+ <input type="text" style="width:200px;" id="themeName"/>
+
+ <input value="Save" onclick="Logic.saveTheme();" type="submit"/>
+ <input value="Reset" onclick="TE.reset();" type="submit"/>
+ </div>
+
+ <table cellspacing="0" cellpadding="0" border="0">
+ <tr>
+ <td id="themeEditor">
+
+ </td>
+ <td>
+ <iframe style="border:0; width:260px; height: 250px; overflow: hidden;" frameborder="0"
+ name="colorpicker"></iframe>
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan="2" style="padding: 0 20px;">
+ Live preview:<br/>
+ <iframe style="background: #EEE; border:0; width:680px; height: 470px; overflow: hidden;"
+ frameborder="0" name="chatclient"></iframe>
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan="2" style="padding: 20px;">
+ Raw color theme source: <a class="tip">?<span>
+ Used for importing and exporting themes: <br/><br/>
+ To import a theme, paste the source into<br/>
+ the text box and click <i>Import</i>.<br/><br/>
+ To export a theme, click <i>Export</i>, then select<br/>
+ all the contents and copy to clipboard.</span></a>
+ <textarea id="rawsrc" rows="7" cols="100" style="width:670px; height: 60px;">
+
+ </textarea>
+ <br/>
+
+ <input type="submit" onclick="TE.imp()" value="Import"/>
+ <input type="submit" onclick="TE.exp()" value="Export"/>
+
+ <br/><br/>
+ <a href="http://www.realchat.com/themes.php">Visit RealChat Theme Gallery</a>
+
+ </td>
+ </tr>
+
+ </table>
+
+ </div>
+</div>
+
+<!-- Live Monitor -->
+<div id="sn4">
+ <!-- Dashboard -->
+ <div style="display: none" id="sn4-1">
+ <div class="cBigHeading" style="float: right;"><b id="sTime">n/a</b></div>
+
+ <div class="cBigHeading">RealChat Dashboard</div>
+
+ <div class="cBody" style="margin-top:515px;">
+ <span style="float: right;">
+ <input type="submit" value="Reset Statistics" onclick="Logic.requestResetStats();"/>
+ </span>
+ <span>
+ <label for="sChartRange">History chart range:</label>
+ <select id="sChartRange" onchange="Logic.requestUpdateStats()">
+ <option value="0">Last 5 Minutes</option>
+ <option selected value="1">Last Hour</option>
+ <option value="2">Last 24 Hours</option>
+ <option value="3">Last 7 Days</option>
+ <option value="4">Last 30 Days</option>
+ <option value="5">Last 365 Days</option>
+ </select>
+ <img id='sChartLoading' src='loading.gif' style='vertical-align:bottom;' alt=''/>
+ </span>
+ </div>
+ <span style="padding: 20px;font-size: 10px; color:#999; text-align:center;">
+ * If a dial is failing to refresh properly, right-click it and select Rewind.
+ </span>
+ </div>
+
+ <!-- Room Browser -->
+ <div style="display: none" id="sn4-2">
+ <div class="cBigHeading">
+
+ <div style="float: right;">
+ <input type="button" value="Refresh" onclick="Logic.browse_home()"/>
+ </div>
+ RealChat Browser <img id='bLoading' src='loading.gif' style='vertical-align:bottom;' alt=''/>
+ </div>
+
+ <div class="cBody">
+ <div id="browser" class="browser">
+ room browser
+ </div>
+ </div>
+ </div>
+
+ <!-- Ban Manager -->
+ <div style="display: none" id="sn4-3">
+ <div class="cBigHeading">
+ <div style="float: right;">
+ <input type="button" value="Refresh" onclick="Logic.listBans()"/>
+ </div>
+ Ban List
+ </div>
+
+ <div class="cBody">
+ <div id="banlist">ban list table</div>
+
+ <div class="buttongroup">
+ <input value="Lift ALL Bans" onclick="Logic.liftAllBans();" type="submit"/>
+ </div>
+ </div>
+ </div>
+</div>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="cc.js!110311012019"></script>
+<noscript>
+ <b>This application requires JavaScript.</b><br/>
+ Your browser either does not support JavaScript or scripts are being blocked.
+</noscript>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+[19/06/11 10:01:58] [CONNECT: 10055] 127.0.0.1:44860
+[19/06/11 10:01:58] [HTTP] 127.0.0.1:44860
+[19/06/11 10:01:59] [127.0.0.1:44860] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [127.0.0.1:44860] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [CONNECT: 10055] 127.0.0.1:44861
+[19/06/11 10:01:59] [HTTP] 127.0.0.1:44861
+[19/06/11 10:01:59] [127.0.0.1:44861] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [127.0.0.1:44860] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [127.0.0.1:44860] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [127.0.0.1:44861] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [CONNECT: 10055] 127.0.0.1:44862
+[19/06/11 10:01:59] [HTTP] 127.0.0.1:44862
+[19/06/11 10:01:59] [127.0.0.1:44862] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:01:59] [DISCONNECT] 127.0.0.1:44861 (IO)
+[19/06/11 10:01:59] [127.0.0.1:44860] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:01:59] [127.0.0.1:44862] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:03:21] [DISCONNECT] 127.0.0.1:44860 (T)
+[19/06/11 10:03:21] [DISCONNECT] 127.0.0.1:44862 (T)
+[19/06/11 10:03:57] [CONNECT: 10055] 127.0.0.1:40121
+[19/06/11 10:03:57] [HTTP] 127.0.0.1:40121
+[19/06/11 10:03:57] [127.0.0.1:40121] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:03:58] [127.0.0.1:40121] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:03:58] [CONNECT: 10055] 127.0.0.1:40122
+[19/06/11 10:03:58] [CONNECT: 10055] 127.0.0.1:40123
+[19/06/11 10:03:58] [HTTP] 127.0.0.1:40122
+[19/06/11 10:03:58] [127.0.0.1:40122] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:03:58] [HTTP] 127.0.0.1:40123
+[19/06/11 10:03:58] [127.0.0.1:40123] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:04] [127.0.0.1:40121] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:04:08] [DISCONNECT] 127.0.0.1:40122
+[19/06/11 10:04:08] [DISCONNECT] 127.0.0.1:40121
+[19/06/11 10:04:08] [DISCONNECT] 127.0.0.1:40123
+[19/06/11 10:04:20] [CONNECT: 10055] 127.0.0.1:40141
+[19/06/11 10:04:20] [HTTP] 127.0.0.1:40141
+[19/06/11 10:04:20] [127.0.0.1:40141] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:20] [127.0.0.1:40141] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:20] [CONNECT: 10055] 127.0.0.1:40142
+[19/06/11 10:04:20] [127.0.0.1:40141] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:21] [HTTP] 127.0.0.1:40142
+[19/06/11 10:04:21] [127.0.0.1:40142] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:21] [CONNECT: 10055] 127.0.0.1:40143
+[19/06/11 10:04:21] [127.0.0.1:40141] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:21] [127.0.0.1:40142] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:21] [HTTP] 127.0.0.1:40143
+[19/06/11 10:04:21] [127.0.0.1:40143] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:23] [127.0.0.1:40142] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:28] [127.0.0.1:40141] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:04:37] [CONNECT: 10055] 127.0.0.1:40162
+[19/06/11 10:04:37] [CROSSDOMAIN REQUEST] 127.0.0.1:40162
+[19/06/11 10:04:37] [DISCONNECT] 127.0.0.1:40162
+[19/06/11 10:04:37] [CONNECT: 10055] 127.0.0.1:40163
+[19/06/11 10:04:37] [RCMP RAW] 127.0.0.1:40163
+[19/06/11 10:04:38] [LOGIN: Administrator] 127.0.0.1:40163
+[19/06/11 10:05:51] [DISCONNECT] 127.0.0.1:40141 (T)
+[19/06/11 10:05:51] [DISCONNECT] 127.0.0.1:40142 (T)
+[19/06/11 10:05:51] [DISCONNECT] 127.0.0.1:40143 (T)
+[19/06/11 10:06:31] [Administrator] Administrator password set to: iiit123
+[19/06/11 10:06:31] [Administrator] Control Center Trusted IPs set to: 0.0.0.0, 10.2.20.209, 127.0.0.1, 
+[19/06/11 10:07:02] [SERVICE_ADVANCED_SETTINGS_CHANGED]
+[19/06/11 10:07:02] [LOGOUT: Administrator] 127.0.0.1:40163
+[19/06/11 10:07:02] [DISCONNECT] 127.0.0.1:40163
+[19/06/11 10:07:03] [CONNECT: 10055] 127.0.0.1:40165
+[19/06/11 10:07:03] [HTTP] 127.0.0.1:40165
+[19/06/11 10:07:03] [127.0.0.1:40165] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:07:06] [127.0.0.1:40165] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:07:40] [CONNECT: 10055] 127.0.0.1:40183
+[19/06/11 10:07:40] [CROSSDOMAIN REQUEST] 127.0.0.1:40183
+[19/06/11 10:07:40] [DISCONNECT] 127.0.0.1:40183
+[19/06/11 10:07:40] [CONNECT: 10055] 127.0.0.1:40184
+[19/06/11 10:07:40] [RCMP RAW] 127.0.0.1:40184
+[19/06/11 10:07:40] [LOGIN: Administrator] 127.0.0.1:40184
+[19/06/11 10:07:57] [127.0.0.1:40165] - "GET /cp/cp.html" 200 492 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:07:57] [CONNECT: 10055] 127.0.0.1:40187
+[19/06/11 10:07:57] [HTTP] 127.0.0.1:40187
+[19/06/11 10:07:57] [127.0.0.1:40187] - "GET /cp/plugin.js" 200 2022 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:07:57] [127.0.0.1:40165] - "GET /cp/plugin.css" 200 467 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:08:42] [127.0.0.1:40187] - "GET /doc/index.html" 200 905 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:08:42] [127.0.0.1:40187] - "GET /doc/images/logo.png" 200 3842 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:08:42] [127.0.0.1:40165] - "GET /doc/doc.css" 200 607 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:08:53] [127.0.0.1:40165] - "GET /doc/howto-setup.html" 200 2075 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:09:33] [DISCONNECT] 127.0.0.1:40187 (T)
+[19/06/11 10:10:23] [DISCONNECT] 127.0.0.1:40165 (T)
+[19/06/11 10:11:10] [CONNECT: 10055] 127.0.0.1:55126
+[19/06/11 10:11:10] [CONNECT: 10055] 127.0.0.1:55127
+[19/06/11 10:11:10] [CONNECT: 10055] 127.0.0.1:55128
+[19/06/11 10:11:10] [HTTP] 127.0.0.1:55128
+[19/06/11 10:11:10] [127.0.0.1:55128] - "GET /cp/slideHue.gif" 200 68 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:11:10] [HTTP] 127.0.0.1:55126
+[19/06/11 10:11:10] [127.0.0.1:55126] - "GET /cp/SatVal.png" 200 10343 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:11:10] [HTTP] 127.0.0.1:55127
+[19/06/11 10:11:10] [127.0.0.1:55127] - "GET /cp/slide.gif" 200 70 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:11:11] [127.0.0.1:55126] - "GET /cp/cp.html" 200 492 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:11:26] [127.0.0.1:55128] - "GET /cp/cp.html" 200 492 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:11:38] [127.0.0.1:55127] - "GET /cp/cp.html" 200 492 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:12:03] [DISCONNECT] 127.0.0.1:55126 (T)
+[19/06/11 10:12:33] [127.0.0.1:55128] - "GET /doc/cc-client-code.html" 200 889 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:12:53] [DISCONNECT] 127.0.0.1:55127 (T)
+[19/06/11 10:13:43] [DISCONNECT] 127.0.0.1:55128 (T)
+[19/06/11 10:13:56] [LOGOUT: Administrator] 127.0.0.1:40184
+[19/06/11 10:13:56] [DISCONNECT] 127.0.0.1:40184
+[19/06/11 10:16:01] [CONNECT: 10055] 127.0.0.1:52668
+[19/06/11 10:16:01] [HTTP] 127.0.0.1:52668
+[19/06/11 10:16:01] [127.0.0.1:52668] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:02] [127.0.0.1:52668] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:02] [DISCONNECT] 127.0.0.1:52668
+[19/06/11 10:16:02] [CONNECT: 10055] 127.0.0.1:52670
+[19/06/11 10:16:02] [HTTP] 127.0.0.1:52670
+[19/06/11 10:16:02] [127.0.0.1:52670] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:02] [127.0.0.1:52670] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:02] [CONNECT: 10055] 127.0.0.1:52671
+[19/06/11 10:16:02] [CONNECT: 10055] 127.0.0.1:52672
+[19/06/11 10:16:02] [HTTP] 127.0.0.1:52671
+[19/06/11 10:16:02] [127.0.0.1:52671] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:02] [HTTP] 127.0.0.1:52672
+[19/06/11 10:16:02] [127.0.0.1:52672] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:02] [CONNECT: 10055] 127.0.0.1:52675
+[19/06/11 10:16:03] [127.0.0.1:52671] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:03] [127.0.0.1:52670] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:03] [127.0.0.1:52672] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:16:03] [HTTP] 127.0.0.1:52675
+[19/06/11 10:16:03] [127.0.0.1:52675] - "GET /cp/cp.html" 200 492 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:07] [127.0.0.1:52671] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:07] [127.0.0.1:52670] - "GET /cp/plugin.css" 200 467 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:07] [127.0.0.1:52672] - "GET /cp/plugin.js" 200 2022 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:10] [127.0.0.1:52675] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:11] [127.0.0.1:52671] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:16:19] [CONNECT: 10055] 127.0.0.1:52719
+[19/06/11 10:16:19] [CROSSDOMAIN REQUEST] 127.0.0.1:52719
+[19/06/11 10:16:19] [DISCONNECT] 127.0.0.1:52719
+[19/06/11 10:16:19] [CONNECT: 10055] 127.0.0.1:52720
+[19/06/11 10:16:20] [RCMP RAW] 127.0.0.1:52720
+[19/06/11 10:16:20] [AUTHENTICATION_FAILED: Administrator:default] 127.0.0.1:52720
+[19/06/11 10:16:20] [DISCONNECT] 127.0.0.1:52720
+[19/06/11 10:16:33] [CONNECT: 10055] 127.0.0.1:52722
+[19/06/11 10:16:33] [RCMP RAW] 127.0.0.1:52722
+[19/06/11 10:16:33] [LOGIN: Administrator] 127.0.0.1:52722
+[19/06/11 10:17:03] [DISCONNECT] 127.0.0.1:52670 (T)
+[19/06/11 10:17:03] [DISCONNECT] 127.0.0.1:52671 (T)
+[19/06/11 10:17:03] [DISCONNECT] 127.0.0.1:52672 (T)
+[19/06/11 10:17:03] [DISCONNECT] 127.0.0.1:52675 (T)
+[19/06/11 10:23:43] [LOGOUT: Administrator] 127.0.0.1:52722
+[19/06/11 10:23:43] [DISCONNECT] 127.0.0.1:52722
+[19/06/11 10:30:15] [CONNECT: 10055] 127.0.0.1:51102
+[19/06/11 10:30:15] [HTTP] 127.0.0.1:51102
+[19/06/11 10:30:15] [127.0.0.1:51102] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [127.0.0.1:51102] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [CONNECT: 10055] 127.0.0.1:51103
+[19/06/11 10:30:16] [HTTP] 127.0.0.1:51103
+[19/06/11 10:30:16] [127.0.0.1:51103] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [127.0.0.1:51102] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [CONNECT: 10055] 127.0.0.1:51104
+[19/06/11 10:30:16] [127.0.0.1:51103] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [127.0.0.1:51102] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:16] [HTTP] 127.0.0.1:51104
+[19/06/11 10:30:16] [127.0.0.1:51104] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:19] [127.0.0.1:51104] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:23] [127.0.0.1:51102] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:30:34] [CONNECT: 10055] 127.0.0.1:51123
+[19/06/11 10:30:34] [CROSSDOMAIN REQUEST] 127.0.0.1:51123
+[19/06/11 10:30:34] [DISCONNECT] 127.0.0.1:51123
+[19/06/11 10:30:35] [CONNECT: 10055] 127.0.0.1:51124
+[19/06/11 10:30:35] [RCMP RAW] 127.0.0.1:51124
+[19/06/11 10:30:35] [LOGIN: Administrator] 127.0.0.1:51124
+[19/06/11 10:31:13] [DISCONNECT] 127.0.0.1:51102 (T)
+[19/06/11 10:31:13] [DISCONNECT] 127.0.0.1:51103 (T)
+[19/06/11 10:31:13] [DISCONNECT] 127.0.0.1:51104 (T)
+[19/06/11 10:32:51] [LOGOUT: Administrator] 127.0.0.1:51124
+[19/06/11 10:32:51] [DISCONNECT] 127.0.0.1:51124
+[19/06/11 10:41:31] [CONNECT: 10055] 127.0.0.1:44016
+[19/06/11 10:41:31] [HTTP] 127.0.0.1:44016
+[19/06/11 10:41:31] [127.0.0.1:44016] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [127.0.0.1:44016] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [CONNECT: 10055] 127.0.0.1:44017
+[19/06/11 10:41:32] [HTTP] 127.0.0.1:44017
+[19/06/11 10:41:32] [127.0.0.1:44016] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [127.0.0.1:44017] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [CONNECT: 10055] 127.0.0.1:44018
+[19/06/11 10:41:32] [127.0.0.1:44016] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [HTTP] 127.0.0.1:44018
+[19/06/11 10:41:32] [127.0.0.1:44018] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:32] [127.0.0.1:44017] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:34] [CONNECT: 10055] 127.0.0.1:44025
+[19/06/11 10:41:34] [CROSSDOMAIN REQUEST] 127.0.0.1:44025
+[19/06/11 10:41:34] [DISCONNECT] 127.0.0.1:44025
+[19/06/11 10:41:34] [CONNECT: 10055] 127.0.0.1:44026
+[19/06/11 10:41:35] [RCMP RAW] 127.0.0.1:44026
+[19/06/11 10:41:36] [LOGIN: Administrator] 127.0.0.1:44026
+[19/06/11 10:41:37] [127.0.0.1:44018] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:41:42] [127.0.0.1:44016] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:42:53] [DISCONNECT] 127.0.0.1:44016 (T)
+[19/06/11 10:42:53] [DISCONNECT] 127.0.0.1:44017 (T)
+[19/06/11 10:42:53] [DISCONNECT] 127.0.0.1:44018 (T)
+[19/06/11 10:45:17] [LOGOUT: Administrator] 127.0.0.1:44026
+[19/06/11 10:45:17] [DISCONNECT] 127.0.0.1:44026
+[19/06/11 10:45:31] Could not bind to /127.0.0.1:10055
+[19/06/11 10:46:03] [CONNECT: 10055] 127.0.0.1:36249
+[19/06/11 10:46:03] [HTTP] 127.0.0.1:36249
+[19/06/11 10:46:03] [127.0.0.1:36249] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [CONNECT: 10055] 127.0.0.1:36250
+[19/06/11 10:46:04] [127.0.0.1:36249] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [CONNECT: 10055] 127.0.0.1:36251
+[19/06/11 10:46:04] [HTTP] 127.0.0.1:36250
+[19/06/11 10:46:04] [HTTP] 127.0.0.1:36251
+[19/06/11 10:46:04] [127.0.0.1:36250] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [127.0.0.1:36251] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [127.0.0.1:36250] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [127.0.0.1:36251] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:04] [127.0.0.1:36249] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:07] [CONNECT: 10055] 127.0.0.1:36258
+[19/06/11 10:46:07] [CROSSDOMAIN REQUEST] 127.0.0.1:36258
+[19/06/11 10:46:07] [DISCONNECT] 127.0.0.1:36258
+[19/06/11 10:46:07] [CONNECT: 10055] 127.0.0.1:36259
+[19/06/11 10:46:08] [RCMP RAW] 127.0.0.1:36259
+[19/06/11 10:46:10] [LOGIN: Administrator] 127.0.0.1:36259
+[19/06/11 10:46:11] [127.0.0.1:36250] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:15] [127.0.0.1:36251] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:46:26] [LOGOUT: Administrator] 127.0.0.1:36259
+[19/06/11 10:46:26] [DISCONNECT] 127.0.0.1:36259
+[19/06/11 10:47:03] [DISCONNECT] 127.0.0.1:36249 (T)
+[19/06/11 10:47:03] [DISCONNECT] 127.0.0.1:36250 (T)
+[19/06/11 10:47:47] Could not bind to /127.0.0.1:10055
+[19/06/11 10:47:53] [DISCONNECT] 127.0.0.1:36251 (T)
+[19/06/11 10:49:48] [CONNECT: 10055] 127.0.0.1:46016
+[19/06/11 10:49:48] [HTTP] 127.0.0.1:46016
+[19/06/11 10:49:48] [127.0.0.1:46016] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [127.0.0.1:46016] - "GET /style.css" 200 1484 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [127.0.0.1:46016] - "GET /loading.gif" 200 875 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [CONNECT: 10055] 127.0.0.1:46017
+[19/06/11 10:49:48] [HTTP] 127.0.0.1:46017
+[19/06/11 10:49:48] [127.0.0.1:46017] - "GET /cc.js" 200 12149 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [CONNECT: 10055] 127.0.0.1:46018
+[19/06/11 10:49:48] [127.0.0.1:46017] - "GET /rcSocket.swf" 200 16480 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [127.0.0.1:46016] - "GET /chart_series.swf" 200 21452 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:48] [HTTP] 127.0.0.1:46018
+[19/06/11 10:49:48] [127.0.0.1:46018] - "GET /chart_angular.swf" 200 14855 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:50] [127.0.0.1:46018] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:49:54] [127.0.0.1:46017] - "GET /favicon.ico" 200 318 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16"  (C)
+[19/06/11 10:50:06] [CONNECT: 10055] 127.0.0.1:46036
+[19/06/11 10:50:06] [CROSSDOMAIN REQUEST] 127.0.0.1:46036
+[19/06/11 10:50:06] [DISCONNECT] 127.0.0.1:46036
+[19/06/11 10:50:06] [CONNECT: 10055] 127.0.0.1:46037
+[19/06/11 10:50:06] [RCMP RAW] 127.0.0.1:46037
+[19/06/11 10:50:06] [LOGIN: Administrator] 127.0.0.1:46037
+[19/06/11 10:50:40] [Administrator] Chat server bind address set: 10.2.20.209:8080
+[19/06/11 10:50:40] [DISCONNECT] 127.0.0.1:46016
+[19/06/11 10:50:40] [DISCONNECT] 127.0.0.1:46017
+[19/06/11 10:50:40] [DISCONNECT] 127.0.0.1:46018
+[19/06/11 10:50:40] [LOGOUT: Administrator] 127.0.0.1:46037
+[19/06/11 10:50:40] [DISCONNECT] 127.0.0.1:46037
+[19/06/11 10:51:31] [CONNECT: 10055] 127.0.0.1:46042
+[19/06/11 10:51:31] [HTTP] 127.0.0.1:46042
+[19/06/11 10:51:31] [127.0.0.1:46042] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:51:34] [127.0.0.1:46042] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:51:41] [CONNECT: 10055] 127.0.0.1:46060
+[19/06/11 10:51:41] [CROSSDOMAIN REQUEST] 127.0.0.1:46060
+[19/06/11 10:51:41] [DISCONNECT] 127.0.0.1:46060
+[19/06/11 10:51:41] [CONNECT: 10055] 127.0.0.1:46061
+[19/06/11 10:51:41] [RCMP RAW] 127.0.0.1:46061
+[19/06/11 10:51:41] [AUTHENTICATION_FAILED: Administrator:default] 127.0.0.1:46061
+[19/06/11 10:51:41] [DISCONNECT] 127.0.0.1:46061
+[19/06/11 10:51:49] [CONNECT: 10055] 127.0.0.1:46062
+[19/06/11 10:51:49] [RCMP RAW] 127.0.0.1:46062
+[19/06/11 10:51:49] [LOGIN: Administrator] 127.0.0.1:46062
+[19/06/11 10:52:58] [Administrator] Chat server bind address set: 10.2.20.209:8080
+[19/06/11 10:52:58] [DISCONNECT] 127.0.0.1:46042
+[19/06/11 10:52:58] [LOGOUT: Administrator] 127.0.0.1:46062
+[19/06/11 10:52:58] [DISCONNECT] 127.0.0.1:46062
+[19/06/11 10:52:59] [CONNECT: 10055] 127.0.0.1:46064
+[19/06/11 10:52:59] [HTTP] 127.0.0.1:46064
+[19/06/11 10:52:59] [127.0.0.1:46064] - "GET /" 200 10605 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:53:01] [127.0.0.1:46064] - "GET /Data.xml" 200 39 "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.16) Gecko/20110323 Ubuntu/9.10 (karmic) Firefox/3.6.16" 
+[19/06/11 10:53:08] [CONNECT: 10055] 127.0.0.1:46082
+[19/06/11 10:53:08] [CROSSDOMAIN REQUEST] 127.0.0.1:46082
+[19/06/11 10:53:08] [DISCONNECT] 127.0.0.1:46082
+[19/06/11 10:53:09] [CONNECT: 10055] 127.0.0.1:46083
+[19/06/11 10:53:09] [RCMP RAW] 127.0.0.1:46083
+[19/06/11 10:53:09] [AUTHENTICATION_FAILED: Administrator:default] 127.0.0.1:46083
+[19/06/11 10:53:09] [DISCONNECT] 127.0.0.1:46083
+[19/06/11 10:53:21] [CONNECT: 10055] 127.0.0.1:46085
+[19/06/11 10:53:21] [RCMP RAW] 127.0.0.1:46085
+[19/06/11 10:53:21] [LOGIN: Administrator] 127.0.0.1:46085
+[19/06/11 10:54:38] [DISCONNECT] 127.0.0.1:46064 (T)
+[19/06/11 11:13:01] [LOGOUT: Administrator] 127.0.0.1:46085
+[19/06/11 11:13:01] [DISCONNECT] 127.0.0.1:46085

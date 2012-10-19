@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Scripting API</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Scripting API</h1>
+<hr/>
+
+<h2></h2>
+
+<p>
+    The Scripting API commands allow you to retrieve information from your RealChat Server. For example, you can show
+    your visitors who is online from a cutsom ASP or PHP page, before they enter the chat room.
+    <br/><br/>
+    API commands are served by the built-in Control Center HTTP server and are accessible from trusted IPs only. You can
+    access the commands with a web browser; for example, <code>http://chathost:controlport/?api.Time</code> will return
+    the current server time.
+    <br/><br/>
+    <b>WARNING:</b> This feature may slow down your chat server, as a connection to the server is made each
+    time a visitor to your site opens a page containing API calls. You should use the scripting apis with care. If your
+    website is heavily loaded, you may need to implement a caching mechanism.
+</p>
+
+<h2>A Scripting API Example</h2>
+
+<p>
+    To use scripting, you must include the results of an external URL within your standard HTML response. This PHP
+    example displays the number of currently connected users and a list of available rooms:
+</p>
+<blockquote>
+    <code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #007700">function&nbsp;</span><span style="color: #0000BB">getAPI</span><span
+            style="color: #007700">(</span><span style="color: #0000BB">$command</span><span style="color: #007700">)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$er&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">error_reporting</span><span
+            style="color: #007700">(</span><span style="color: #0000BB">0</span><span style="color: #007700">);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span
+            style="color: #0000BB">file_get_contents</span><span style="color: #007700">(</span><span
+            style="color: #DD0000">"http://chathost:controlport/?api."</span><span style="color: #007700">.</span><span
+            style="color: #0000BB">$command</span><span style="color: #007700">);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+            style="color: #0000BB">error_reporting</span><span style="color: #007700">(</span><span
+            style="color: #0000BB">$er</span><span
+            style="color: #007700">);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span
+            style="color: #0000BB">$result</span><span style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span
+            style="color: #DD0000">"Number&nbsp;of&nbsp;users:&nbsp;"</span><span style="color: #007700">.</span><span
+            style="color: #0000BB">getAPI</span><span style="color: #007700">(</span><span style="color: #DD0000">"UserCount"</span><span
+            style="color: #007700">).</span><span style="color: #DD0000">"&lt;br/&gt;"</span><span
+            style="color: #007700">;<br/>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">"Rooms&nbsp;available:&nbsp;"</span><span
+            style="color: #007700">.</span><span style="color: #0000BB">getAPI</span><span
+            style="color: #007700">(</span><span style="color: #DD0000">"RoomList"</span><span
+            style="color: #007700">);<br/></span><span style="color: #0000BB">?&gt;<br/></span>
+</span>
+    </code>
+</blockquote>
+
+<h2>Available Scripting Commands</h2>
+
+<blockquote>
+    <code>Time</code> - returns the current server time.<br/>
+    <code>InMPS, OutMPS</code> - current incoming/outgoing messages per second.<br/>
+    <code>UserCount</code> - number of users connected.<br/>
+    <code>RoomCount</code> - number of available rooms.<br/>
+    <code>RoomList</code> - a comma delimited list of available rooms.<br/>
+    <code>DetailedRoomList</code> - a list of rooms with each room formatted as: <i>roomID: roomName
+    (userCount)</i><br/>
+    <code>UsersIn=<i>room</i></code> - a comma delimited list of all the users in the specified room.<br/>
+    <code>WhereIs=<i>user</i></code> - finds the room where the specified user is; returns nothing if the user is
+    not found.<br/>
+    <code>WhoWhere</code> - lists all of the users in all rooms; with one room per line, formatted as: <i>roomID:
+    roomName:
+    userList</i>.<br/>
+    <br/>
+    <code>Broadcast=<i>message</i></code> - broadcasts the specified message to all users in <i>all
+    rooms</i>.<br/>
+    <code>SendToRoom=<i>room,message</i></code> - broadcasts the specified message to all users in the specified
+    room.<br/>
+    <code>SendToUser=<i>user,message</i></code> - sends a private message to the specified user.<br/>
+    <br/>
+    <code>AddRoom=<i>name,topic,password,hidden</i></code> - creates a room with the specified parameters. If <i>password</i>
+    is left blank, the room is made public; if <i>hidden</i> is skipped, the room is made visible.<br/>
+    <code>RemoveRoom=<i>room</i></code> - deletes the specified room.<br/>
+    <code>SaveConfiguration</code> - by default rooms created/deleted via the API are non-permanent and last until the
+    next server restart. If you like the changes to be permanent use this command.<br/>
+</blockquote>
+
+<h2>Notes</h2>
+
+<p>
+    Arguments with spaces need to be passed URL-encoded, for example <code>The%20Lobby</code> instead of
+    <code>The Lobby</code>.<br/><br/>
+    If an error occurs, the server response is always prefixed with <code>ERR:</code>.<br/><br/>
+    With RealChat ISP Edition, all API commands return information for the first, or default, virtual server.
+    If you want to check a specific virtual server, add <code>vs=serverID</code>, for example,
+    <code>api.vs=3,UserCount</code> will return the number of users connected to the virtual server with an ID of
+    <code>3</code>.
+
+</p>
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>RealChat: Performance Tuning</title>
+    <style type="text/css">
+        @import url( doc.css );
+    </style>
+</head>
+
+<body>
+<div class="nav">[ <a href="index.html">contents</a> ]</div>
+<img style="float: right;" src="images/logo.png"
+     width="100" height="35" border="0" title="RealChat Software" alt=""/>
+
+<h1>Performance Tuning</h1>
+<hr/>
+
+<h2>&nbsp;</h2>
+
+<p>
+    If you expect more than just a few hundred concurrent users, you may need to tune the server OS to increase the
+    number of connections allowed.
+</p>
+
+<h2>File descriptor limits on UNIX/Linux</h2>
+
+<p>
+    RealChat server requires <i>one file descriptor per concurrent user</i>. UNIX/Linux operating systems limit the
+    number of file descriptors that a process may open. The limit varies across OSes (for Linux it is usually 1024). To
+    display the current value, or set the limit for the current session, use the <code>ulimit -n</code> command. To
+    permanently set the limit, consult your OS manual.
+</p>
+
+
+<hr id="foot"/>
+Copyright &copy; 1998&#8212;2007, RealChat Software. All rights reserved.
+</body>
+</html>

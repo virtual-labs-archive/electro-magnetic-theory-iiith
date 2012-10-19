@@ -1,0 +1,341 @@
+<title>Electrostatics Applet Directions</title>
+<body>
+<hr>
+<a href="index.html">Click here to go to the applet.</a>
+<p>
+This java applet demonstrates
+electrostatics and static current distributions in two dimensions.
+There is also a <a href="/vector3de/">three dimensional applet</a>
+which is more accurate but less flexible.
+<p>
+When the applet starts up you will see the electric field of a
+single positive charge.  The yellow circle represents the charge;
+the white circles around it are equipotential lines (lines of constant
+potential).  The green arrows indicate the electric field.  The charge
+can be dragged around the screen with the mouse.
+<p>
+In general, yellow represents positive charge, and blue represents
+negative charge.
+<p>
+Conductors, dielectrics, and media with bound charges will show up as
+gray.  There
+aren't enough colors or shades of gray to make the different
+kinds of media look different.  Use the <b>Show Material Type</b>
+menu option to tell them apart.
+<hr>
+<p>
+The <b>Setup popup</b> can be used to view some interesting
+pre-defined experiments.  Once an experiment is selected,
+you may modify it all you want.  The choices are:
+<ul>
+<li><b>Single Charge</b>: this is a single positive charge.
+<li><b>Double Charge</b>: Two positive charges.
+<li><b>Dipole Charge</b>: One positive and one negative
+charge.  The equipotential between the two charges should be a straight
+line; set the accuracy menu to a higher setting to make it straighter.
+<li><b>Charge + Plane</b>: A charge near a grounded
+conductor.  Note that the field in the upper half is nearly
+the same as in <b>Dipole Charge</b> (it should be exactly the same).  The
+blue color on the conductor indicates negative surface charge, which is
+put there to balance the external field and
+maintain the conductor at ground.
+<li><b>Dipole + Uniform</b>: A dipole in a uniform field.
+<li><b>Quadrupole Charge</b>: Two positive and two negative
+charges.
+<li><b>Conducting Planes</b>: Two conductors fixed
+at opposite potentials.  The yellow and blue color on the outer edge of
+the conductors indicate positive and negative surface charges.  Charge
+is added to or removed from each conductor as needed to maintain the
+potential.
+<li><b>Charged Planes</b>: Two uniformly charged planes.
+<li><b>Conducting Cylinder</b>: A cross section of a conducting
+cylinder at positive potential.
+<li><b>Grounded Cyl + Charge</b>: A cross section of a grounded
+conducting cylinder with a charge next to it.
+<li><b>Grounded Cyl + Field</b>: A cross section of a grounded
+conducting cylinder in a uniform field.
+<li><b>Charged Cylinder</b>: A cross section of an uniformly
+charged cylinder.
+<li><b>Charged Hollow Cyl 1</b>: A cross section of an uniformly
+charged hollow cylinder.  Note that there is no field in the cavity,
+since the potential is constant there.
+<li><b>Charged Hollow Cyl 2</b>: A cross section of an uniformly
+charged cylinder with an off-center cylindrical cavity inside.  Note that there
+is a uniform field in the cavity.
+<li><b>Floating Cyl + Charge</b>: A cross section of a cylinder
+with floating potential, with a charge next to it.  The charge on the
+cylinder is a constant (zero), so the potential will vary depending on
+where the charge is.  If the charge is deleted then the cylinder will
+be at ground.
+<li><b>Floating Cyl + Plates</b>: A cross section of a cylinder
+with floating potential, with two plates at positive and negative
+potentials.  The charge on the cylinder is a constant as long as it is
+not touching anything, so the potential will vary depending on where
+it is located.  If you move the cylinder so it is touching one of the
+plates, then enough charge will move onto the cylinder to make its
+potential the same as the plate it is touching.
+<li><b>Conducting Box</b>: A conducting box at positive potential.
+The field is zero inside, since the potential is constant.  Note that
+the field is stronger at the corners.
+<li><b>Sharp Point</b>: A conductor at positive potential,
+coming to a sharp point.  Note that the field is strongest at the point.
+<li><b>Corner</b>: The corner of a conductor at positive potential.
+<li><b>45 Degrees</b>: A 45 degree corner of a conductor at
+positive potential.  The field near this corner is stronger than
+the field near a 90 degree corner.
+<li><b>135 Degrees</b>: A 135 degree corner of a conductor at
+positive potential.  The field is weaker than near a 90 degree corner.
+<li><b>Dielectric Cylinder</b>: A dielectric cylinder with a charge
+near it.
+<li><b>Dielectric Cyl + Field</b>: A dielectric cylinder in an external
+uniform field.
+<li><b>Dielectric 1</b>: A charge near a dielectric boundary.  Notice
+that the field lines bend toward the boundary.
+<li><b>Dielectric 2</b>: A charge inside a dielectric, near the
+boundary.  Notice that the field lines bend away from the boundary.
+<li><b>Dielectric + Dipole</b>: A dipole with a dielectric boundary
+between the charges.
+<li><b>Dielectric Capacitor</b>: Two conducting planes at opposite
+potentials with a dielectric between them.  The surface charge on the
+planes is stronger at the dielectric boundary.  You can see the total
+charge on each plane by moving the mouse over one of them; the charge
+is shown in the lower-left hand corner of the screen.  The dielectric
+strength can be adjusted using the <b>Mouse = Adjust Dielectric</b>
+menu option, by dragging out an area including the dielectric with
+the mouse and then fiddling with the <b>Dielectric Constant</b>
+Slider.  This will affect the amount of charge on each plane.  The stronger
+the dielectric, the more charge on each plane, and the higher the
+capacitance between the two planes.
+<li><b>Conducting Planes w/ Gap</b>: Two conducting planes at opposite
+potentials with a gap between them.
+<li><b>Slotted Conducting Plane</b>: Two grounded conducting planes with a gap
+between them, in an external field.  Some of the field leaks through the
+gap.
+<li><b>Shielding 1</b>: A grounded conducting box shielding its interior from
+an external uniform field.
+<li><b>Shielding 2</b>: A grounded conducting box shielding its exterior from
+a charge inside.
+<li><b>Box w/ One Live Side</b>: A grounded conducting box with one side
+that is at positive potential.
+<li><b>Quadrupole Lens</b>: 
+This is an electrostatic quadrupole lens, used to focus particle
+beams.  It is similar to the
+<a target="_blank" href="http://cbp-1.lbl.gov/cycle2p02d.htm">magnetic</a>
+quadrupole lens used in particle accelerators.
+It consists of four hyperbola-shaped conductors at
+alternating potentials.
+<li><b>Wire w/ Current</b>: This is a wire carrying current from the
+top of the screen to the bottom.  The current
+is indicated by the yellow arrows.  Since the wire has resistance,
+the potential drops continuously over the length of the wire.
+<li><b>Resistor</b>: This is two wires connected to a resistor, all carrying
+current.  The potential drops continuously over the length of the resistor,
+and less so over the length of the wire (since its resistance is
+lower).  Since the electric field is stronger in the resistor than in
+the wire, there is some charge at the top and bottom of the resistor
+to maintain this discontinuity in the field.  This charge causes the
+resistor to have some stray capacitance.
+<li><b>Resistors in Parallel</b>: This shows three resistors in
+parallel.  The middle one has the highest resistance, so the current
+is weakest there.  The left one has the lowest resistance.
+<li><b>Current in 2D 1</b>: This shows the flow of current in a
+two-dimensional plate.
+<li><b>Current in 2D 2</b>: This shows the flow of current in a
+wire which is wider in the middle.
+</ul>
+<p>
+The <b>Mouse popup</b> controls what happens when the mouse is
+clicked.  The following settings are possible:
+<ul>
+<li><b>Mouse = Move Object</b>:
+Clicking on an object (a conductor, draggable charge, area of bound charge,
+or dielectric) will allow you to drag it somewhere else on the
+screen.  Objects that extend offscreen cannot be moved.
+<li><b>Mouse = Delete Object</b>:
+Clicking on an object (a conductor, draggable charge, area of bound charge,
+or dielectric) will delete it.
+<li><b>Mouse = Add + Draggable Charge</b>:
+Clicking on a point will create a positive draggable charge there.
+<li><b>Mouse = Add - Draggable Charge</b>:
+Clicking on a point will create a negative draggable charge there.
+<li><b>Mouse = Clear Square</b>:
+Clicking on a square will remove whatever is there (conductor,
+bound charge, dielectric).  This will remove just one square, as opposed
+to <b>Delete Object</b> which will delete all connected squares.  This
+won't remove draggable charges; use
+<b>Delete Object</b> to remove those.
+<li><b>Mouse = Add Conductor (Gnd)</b>:
+Clicking on a
+point will create a conductor fixed at ground.
+<li><b>Mouse = Add + Conductor</b>:
+Clicking on a
+point will create a conductor fixed at positive potential.
+<li><b>Mouse = Add - Conductor</b>:
+Clicking on a
+point will create a conductor fixed at negative potential.
+<li><b>Mouse = Add + Charge Square</b>:
+Clicking on a
+point will create a square of positive bound charge.
+<li><b>Mouse = Add - Charge Square</b>:
+Clicking on a
+point will create a square of negative bound charge.
+<li><b>Mouse = Add Dielectric</b>:
+Clicking on a
+point will create a square of dielectric medium.
+<li><b>Mouse = Make Floater</b>:
+Clicking on a
+conductor will cause it to have a floating potential.  Most conductors
+in this applet are at fixed potential, which means that charge is added
+or removed as needed to maintain a constant potential.
+A floating conductor has a constant charge, so the potential will vary
+depending on
+what charges are nearby.  Only one conductor on the screen can be
+floating.  If you make any changes to a floating conductor then it will
+be changed into an ordinary conductor; you will have to use
+<b>Make Floater</b> to make it floating again.
+<li><b>Mouse = Adjust Conductivity</b>:
+Clicking on a point and dragging out a rectangular area will allow you to
+adjust the conductivity of the conductors in that area using the
+<b>Conductivity</b> slider.  The
+<b>Show Material Type</b> menu option may come in handy here (and in
+the following options) to see feedback from the changes you are making
+and to compare the conductivity of all conductors on the screen.
+<li><b>Mouse = Adjust Dielectric</b>:
+Clicking on a point and dragging out a rectangular area will allow you to
+adjust the dielectric constant on the dielectrics in that area using the
+<b>Dielectric Constant</b> slider.
+<li><b>Mouse = Adjust Potential</b>:
+Clicking on a point and dragging out a rectangular area will allow you to
+adjust the potential on the conductors in that area using the
+<b>Potential</b> slider.  This can also be used to change the potential
+of a floating conductor.
+<li><b>Mouse = Adjust Charge</b>:
+Clicking on a point and dragging out a rectangular area will allow you to
+adjust the charge on the draggable or bound charges in that area
+using the <b>Charge</b> slider.
+</ul>
+<p>
+The <b>Show</b> popup determines which fields or other quantities to
+display, and how to display them.
+<ul>
+<li><b>Show Electric Field (E)</b>: Show the electric field
+as arrows.  The arrows go from dark green to light green and
+then to white as the field gets stronger.
+<li><b>Show E Lines</b>: Show the electric field as lines.  The
+color of the lines go from dark green to light green and
+then to white as the field gets stronger.  The density of the
+lines is kept fairly constant, so in order to determine the
+field strength you need to look at the color of the lines
+rather than how far apart they are.
+<li><b>Show Potential (Phi)</b>: Show the potential; green is
+positive, red is negative, and black is ground.
+<li><b>Show Vector Potential</b>: Show the <a target="_blank" href="http://scienceworld.wolfram.com/physics/MagneticVectorPotential.html">vector potential</a> (<b>A</b>)
+as arrows.
+<li><b>Show Magnetic Field (B)</b>: Show the magnetic field
+as green (positive, toward you) or red (negative, away from you).
+<li><b>Show Current (j)</b>: Show the current density as
+yellow arrows.
+<li><b>Show Charge (rho)</b>: Show the charge density as
+yellow (positive) or blue (negative).
+<li><b>Show Displacement (D)</b>: Show the <A target="_blank" href="http://scienceworld.wolfram.com/physics/D.html">electric displacement vector</a>.
+<li><b>Show Polarization (P)</b>: Show the <A target="_blank"
+href="http://scienceworld.wolfram.com/physics/ElectricPolarization.html">electric
+polarization vector</a>.
+<li><b>Show Polarization Charge</b>: Show the
+<a target="_blank" href="http://web.mit.edu/6.013_book/www/chapter6/6.1.html">polarization charge density</a>.
+<li><b>Show Material Type</b>: Since all materials show up as
+gray, you need this option to tell them apart:
+<ul>
+<li>Conductors: cyan (<img src="col_cyan.gif">) (lighter shades indicate
+better conductors)
+<li>Floating Potential Conductors: purple (<img src="col_purple.gif">)
+<li>Dielectrics: orange (<img src="col_orange.gif">) (lighter shades indicate
+stronger dielectrics)
+<li>Bound Charges: blue (<img src="col_blue.gif">) or yellow (<img src="col_yellow.gif">)
+</ul>
+<li><b>Show rho/j</b>: Show both the charge density and the current.
+<li><b>Show E/rho</b>: Show both the electric field and the charge density.
+<li><b>Show E lines/rho</b>: Show both the electric field lines and the charge density.
+<li><b>Show E/j</b>: Show the current density in conductors and the
+electric field outside of conductors.
+<li><b>Show E lines/j</b>: Show the current density in conductors and the
+electric field lines outside of conductors.
+<li><b>Show E/rho/j</b>: Show the current density in conductors and the
+electric field outside of conductors.  Also, show the charge density.
+<li><b>Show E lines/rho/j</b>: Show the current density in conductors and the
+electric field lines outside of conductors.  Also, show the charge density.
+<li><b>Show E/phi</b>: Show the electric field and the potential.
+<li><b>Show E lines/phi</b>: Show the electric field lines and the potential.
+<li><b>Show E/Phi in conductors</b>: Show the electric field,
+and in conductors also show the potential.
+<li><b>Show E lines/Phi in conductors</b>: Show the electric field lines,
+and in conductors also show the potential.
+<li><b>Show E/Phi/j</b>: Show the current density in conductors
+and the electric field outside of conductors.  Also show the potential.
+<li><b>Show E lines/Phi/j</b>: Show the current density in conductors
+and the electric field lines outside of conductors.  Also show the potential.
+<li><b>Show B/j</b>: Show the magnetic field and the current density.
+<li><b>Show E/B/rho/j</b>: Show the electric and magnetic field outside
+of conductors and the charge and current densities inside.
+<li><b>Show E lines/B/rho/j</b>: Show the electric field lines and magnetic
+field outside
+of conductors and the charge and current densities inside.
+<li><b>Show Ex</b>: Show the X component of the electric field.
+<li><b>Show Ey</b>: Show the Y component of the electric field.
+<li><b>Show Dx</b>: Show the X component of the electric displacement.
+<li><b>Show Dy</b>: Show the Y component of the electric displacement.
+</ul>
+<p>
+The <b>Accuracy popup</b> controls the accuracy used to calculate
+the fields.  Lower accuracy is faster but may display misleading or
+incorrect results.
+<p>
+The <b>Clear All</b> button clears the screen.
+<p>
+The <b>Stop Calculation</b> checkbox stops the calculation of the
+fields.  You can check this temporarily
+if you want to make a bunch of changes without having the
+calculation slow you down.  Then when you're done, uncheck it to have
+the fields calculated.
+<p>
+The <b>Enable Current</b> checkbox allows current to flow.  When this is
+checked, the top of the screen is fixed at positive potential and the
+bottom of the screen is fixed at negative potential.  If there is a
+conducting path from the top to the bottom of the screen, then current
+will flow.  Any conductors not connected to the top or bottom of the
+screen will be at ground.
+<p>
+The <b>Draw Equipotentials</b> checkbox draws equipotential lines,
+which are lines of constant potential.
+<p>
+The <b>Resolution</b> slider allows you to speed up or slow down the
+applet by adjusting the resolution; a higher resolution is slower
+but looks better.
+<p>
+The <b>Brightness</b> slider controls the brightness, just like on a
+TV set.  Also when the brightness is higher it causes more equipotentials
+to be drawn.
+<p>
+The <b>Equipotential Count</b> slider allows you to control the number
+of equipotentials independently from the brightness.
+<hr>
+<b>Warning!</b>  With low accuracy settings, the applet may give bad results
+for current flow in circuits with dead ends, like this one:
+<p>
+<img src="badcurrent.gif">
+<p>
+This is obviously not correct; it's not possible to have steady-state
+current flow into a dead end.  The problem is that the branch has a very thin separation between it
+and a conductor at higher potential, and that confuses the applet.
+<p>
+To fix this, either use a higher accuracy setting (which will be slower)
+or make the separation wider, like so:
+<p>
+<img src="badcurrent2.gif">
+<p>
+<a href="index.html">Click here to go to the applet.</a>
+<hr>
+<a href="http://www.falstad.com/mathphysics.html"><img src="/mathphysics_small.gif"></a>
+<a href="http://www.falstad.com/index.html"><img src="/me_small.gif"></a>
+<br><i>java@</i><i>falstad.com</i>
+</body>

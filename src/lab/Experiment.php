@@ -23,14 +23,17 @@ else
 <link href="css/custom.css" rel="stylesheet" type="text/css">
 
 
-<script type="text/javascript" src="ddtabmenufiles/ddtabmenu.js">
-</script>
+<script type="text/javascript" src="ddtabmenufiles/ddtabmenu.js">
+
+</script>
+
 <link rel="stylesheet" type="text/css" href="ddtabmenufiles/glowtabs.css" />
 
 
 
 </head>
 <body bgcolor="#FFFFFF">
+<?php include_once("analyticstracking.php") ?>
 <div id="header_main"><img src="" align="right" style="padding-right:20px"></div>
 <div id="no_print">
 	<!-- start header -->
@@ -70,14 +73,16 @@ else
 		
         	</ul>
 		
-</div>	
+</div>
+	
 
 <?
 $row = mysql_query("select title from menu where id=\"C001\"");
 $title = $row['title'];
 
 ?>
-<div style="position: relative; margin:auto; width: 1024px; background-color:#e3f2fc"><br/>
+<div style="position: relative; margin:auto; width: 1024px; background-color:#e3f2fc"><br/>
+
 
   <span class="title"><?php print $title;?></span>
 </div>
@@ -158,7 +163,8 @@ $title = $row['title'];
   			$author=$row['author'];	
   			$ptext=$row['posttext'];
   			print("
-				<p class = \"tag_title\"><div style=\"background-color:#e5eecc;border:solid 1px #c3c3c3;padding:5px;font-size:20px;text-align:center\"> $title </div></p>
+				<p class = \"tag_title\"><div style=\"background-color:#e5eecc;border:solid 1px #c3c3c3;padding:5px;font-size:20px;text-align:center\"> $title
+ </div></p>
 				<br />
 					 <p>$ptext</p>
 			");

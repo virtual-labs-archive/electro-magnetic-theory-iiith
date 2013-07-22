@@ -125,14 +125,17 @@ margin-top: 0px;
 }
 </style>
 
-<script type="text/javascript" src="ddtabmenufiles/ddtabmenu.js">
-</script>
+<script type="text/javascript" src="ddtabmenufiles/ddtabmenu.js">
+
+</script>
+
 <link rel="stylesheet" type="text/css" href="ddtabmenufiles/glowtabs.css" />
 
 
 
 </head>
 <body bgcolor="#FFFFFF">
+<?php include_once("analyticstracking.php") ?>
 <div id="header_main"><img src="" align="right" style="padding-right:20px"></div>
  <div id="no_print">
 <!-- start header -->
@@ -173,7 +176,8 @@ echo "<li><a href=\"$link\" target=\"_self\">$caption</a></li>";
         </ul>
 
 </div>
-<div style="position: relative; margin:auto; width: 1024px; background-color:#e3f2fc"><br/>
+<div style="position: relative; margin:auto; width: 1024px; background-color:#e3f2fc"><br/>
+
 <div style="background-color:#e5eecc;border:solid 1px #c3c3c3;padding:5px;font-size:25px;text-align:center">List of Experiments <p style="font-size:15px">(site updated on October 22, 2011)
 <marquee>please clear the cached pages in your browser to see the recent updates</marquee>
 
@@ -231,7 +235,8 @@ echo"
 	<div onClick=\"panel$i()\"><p style=\"font-family:monospace;font-size:16px;\"> see Description</p> </div>
 	<a href=\"$manual_link\"> <p style=\"font-family:monospace;font-size:16px;\">see Manual</a></p>
 	<a href=\"$link\"> <p style=\"font-family:monospace;color:green;font-size:16px;\">start the experiment</p></a><br />
-			<h3><p>$ptext</p></h3><br /><br />
+			<h3><p>$ptext</p></h3>
+<br /><br />
 			";
 $i+=1;
 

@@ -85,7 +85,7 @@ function desc(id,num)
 
 	</head>
 <body onLoad = "switchImage('slideImg')">
-
+<?php include_once("analyticstracking.php") ?>
 <div id="container">    
 <div id="header_new">
                         <p><img src="images_site/header_01.jpg"></p>				

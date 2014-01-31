@@ -116,7 +116,7 @@ function desc(id,num)
 				
 				<!-- Troubleshooting -->
 				<LI >
-					<A href="aboutus.php"><SPAN><u> Contact Us </u></SPAN></A>
+					<A href="http://virtual-labs.ac.in/feedback/"><SPAN><u> Feedback </u></SPAN></A>
 				</LI>
 				<LI> <IMG src = "images_site/nav-bar-sep.png"/> </Li>
 				

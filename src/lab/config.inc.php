@@ -2,10 +2,10 @@
 # Database name
 $db = "emt";
 # Internet address or hostname of database host
-$db_host = "db.virtual-labs.ac.in";
+$db_host = "localhost";
 # Database username
-$db_user = "emt";
+$db_user = "root";
 # Database password
-$db_password = "changethis";
+$db_password = "";
 
 ?>

@@ -102,6 +102,12 @@ function desc(id,num)
 					<A href="index.php"><SPAN><u> Home </u></SPAN></A>
 				</LI>
 				<LI> <IMG src = "images_site/nav-bar-sep.png"/> </Li>
+
+				 <LI>
+                                        <A href="dependencies.html"><SPAN><u>Prerequisite S/W</u></SPAN></A>
+                                </LI>
+
+				<LI> <IMG src = "images_site/nav-bar-sep.png"/> </Li>
 	
 				<LI>
 					<A href="experiments.php"><SPAN><u> Start Experiments </u></SPAN> </A>

@@ -1,0 +1,27 @@
+* Author: Nihanth
+* Date Created: 15 Apr 2016
+* Environment
+  - OS: Windows 7, Linux
+  - Browsers: Firefox,Chrome
+  - Bandwidth : 100Mbps
+  - Hardware Configuration:8GBRAM , 
+  - Processor:i5,
+
+* Objective
+  - To view the Manual of “Application of Faraday's Laws” experiment
+
+* Pre conditions
+  - Refer to first test case [[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/Application of Faraday's Laws/Application of Faraday's Laws_01_Usability_smk.org][Application of Faraday's Laws_01_Usability_smk.org]]
+
+* Post conditions
+  - Nil
+* Test Steps
+  1. Click on the see Manual link
+
+* Expected result
+  1. A pdf page should be opened with the Manual displayed on the screen
+  2. Content should be present with no distortions and Junk characters
+
+* Review/comments
+
+

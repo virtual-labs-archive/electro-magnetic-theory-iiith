@@ -1,0 +1,9 @@
+S.no		Test case link
+1. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_01_Usability_smk.org][Electromagnetic Theory l_01_Usability_smk.org]]
+2. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_02_Home%20page_smk.org][Electromagnetic Theory l_02_Home page_smk.org]]
+3. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_03_Prerequisite%20SW_smk.org][Electromagnetic Theory l_03_Prerequisite SW_smk.org]]
+4. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_04_Experiments_smk.org][Electromagnetic Theory l_04_Experiments_smk.org]]
+5. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_05_FAQs_smk.org][Electromagnetic Theory l_05_FAQs_smk.org]]
+6. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_06_Feedback_smk.org][Electromagnetic Theory l_06_Feedback_smk.org]]
+7. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_07_Live%20support_smk.org][Electromagnetic Theory l_07_Live support_smk.org]]
+8. 	[[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/System/Electromagnetic%20Theory%20l_08_Links_smk.org][Electromagnetic Theory l_08_Links_smk.org]]

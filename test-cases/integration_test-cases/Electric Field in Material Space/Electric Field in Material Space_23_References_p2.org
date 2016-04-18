@@ -1,0 +1,34 @@
+* Author: Nihanth
+* Date Created: 15 Apr 2016
+* Environment
+  - OS: Windows 7, Linux
+  - Browsers: Firefox,Chrome
+  - Bandwidth : 100Mbps
+  - Hardware Configuration:8GBRAM , 
+  - Processor:i5
+  - Links
+  - 1.http://www.cliffsnotes.com/study_guide/Electrostatics.topicArticleId-10453,articleId-10431.html
+  - 2.http://hyperphysics.phy-astr.gsu.edu/hbase/electric/elesht.html
+  - 3.http://webphysics.davidson.edu/physlet_resources/bu_semester2/c03_inf_sheet.html
+
+* Objective
+  - To view the links in the References page of "Electric Field in Material Space " experiment
+
+* Pre conditions
+  - Refer to first test case [[https://github.com/Virtual-Labs/electro-magnetic-theory-iiith/blob/master/test-cases/integration_test-cases/Electric Field in Material Space/Electric Field in Material Space_01_Usability_smk.org][Electric Field in Material Space_01_Usability_smk.org]]
+
+* Post conditions
+  - Nil
+* Test Steps
+  1. Click on the References link 
+  2. Check if there are any distortions and junk characters in the References page
+  3. Click on the links displayed in the page
+
+* Expected result
+  1. References page should be opened
+  2. Content should be present with no distortions and Junk characters
+  3. It should redirect to a new tab with the selected link
+
+* Review/comments
+
+
